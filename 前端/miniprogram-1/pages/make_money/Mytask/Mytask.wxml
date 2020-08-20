@@ -1,0 +1,86 @@
+<!--task/task.js.wxml-->
+<!-- <view class="renwu">任务详情</view> -->
+<view class="weui-form-preview__bd">
+	<view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.title}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionHeadline}}</text>
+	</view>
+	<view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.publisher}}</label>
+		<view style="float:left" >
+			<image src="{{trialLogs.userHead}}" class="picture"></image>
+		</view>
+		<text class="weui-form-prevew__value" style="float:left;padding-left:10rpx;" >{{trialLogs.userName}}</text>
+    <view >
+      <button size="mini" class="button" >+关注</button>
+      <button size="mini" class="button" >店铺</button>
+    </view>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.number}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionNo}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.category}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionTypeName}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.unitprice}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionMoney}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.verification}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionVerify}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.remark}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionText}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.zhidingdaoqi}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionSt}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.deadline}}</label>
+		<text class="weui-form-preview__value">{{trialLogs.missionCt}}</text>
+	</view>
+</view> 
+<view class="backgroundcolor1">
+
+	<view class="yanzheng">验证图(共{{img.length}}张)</view>
+	<block wx:for="{{img}}" wx:key="item">
+		<image src="{{item}}" class="wenbenkuang" data-index="{{index}}" bindtap="handleImage"></image>
+	</block>
+</view>
+<!-- <view class="caozuo">操作说明</view>
+<view class="backgroundcolor">
+	<view class="danhang">扫码注册，如果网页缓慢，切换网络！</view>
+	<image src="../picture/caozuoliucheng1.PNG" class="wenbenkuang"></image>
+</view>
+<view class="backgroundcolor">
+	<view class="danhang">聊天员APP下载地址</view>
+	<image src="../picture/caozuoliucheng2.PNG" class="wenbenkuang"></image>
+</view>
+<view class="backgroundcolor">
+	<view class="danhang">完成个人认证，就可以打招呼赚钱了</view>
+	<image src="../picture/caozuoliucheng3.PNG" class="wenbenkuang"></image>
+</view>-->
+<view class="backgroundcolor3">
+	<!-- <view class="danhang">不知道怎么和人聊天直接说爱聊不聊</view> -->
+	<!-- <image src="../picture/caozuoliucheng4.PNG" class="wenbenkuang"></image> -->
+	<view class="jubao1">完成任务后，请回到平台【我的任务】上传任务截图</view>
+	<view class="jubao2">平台禁止发布一切法律所禁止的内容，如果发现请</view>
+	<view bindtap="ju" class="jubao"  >举报</view>
+	<!-- <view bindtap="qiangdan" class="qiangdan" bindtap="handleShowmodal1">
+	  <image src="/pages/picture/qiangdan.png"/>
+  </view> 
+  <view bindtap="diuqi" class="diuqi"  bindtap="handleShowmodal">
+    <image src="/pages/picture/diuqi.png"/>
+  </view>  -->
+  <view bindtap="fhsy" class="fhsy">
+	  <image src="../../style/im/fhsy.png"/>
+  </view>
+</view>  
+
+			
+

@@ -1,0 +1,26 @@
+<!--pages/complain/complain.wxml-->
+<view class="box">
+  <view class="main">
+    <view class="head">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="name">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+
+  <view class="body">
+
+    <view class="complaint_time">
+       投诉标题：{{after.afterReason}}
+    </view>
+    <view class="content">
+      投诉时间：{{afterTime}}
+    </view>
+  </view>
+
+  <view class="tail">
+    <button size="mini" class="btn1">取消</button>
+    <button size="mini" bindtap="tabclick" data-index='{{after.afterId}}' >通过</button>
+  </view>
+</view>

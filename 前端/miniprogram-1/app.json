@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/make_money/home/home",
+    "pages/make_money/abc/abc",
+    "pages/make_money/as/as",
+    "pages/make_money/tab/tab",
+    "pages/make_money/jubao/jubao",
+    "pages/make_money/index/index",
+    "pages/make_money/Mytask/Mytask",
+    "pages/make_money/Mytaskpublish/Mytaskpublish",
+    "pages/make_money/search/search",
+    "pages/make_money/tpyz/tpyz",
+    "pages/make_money/task/task",
+    "pages/make_money/Mpage/Mpage",
+    "pages/make_money/rwxq/rwxq",
+    "pages/make_money/shenhe/shenhe",
+    "pages/backstage/home-page/home-page",
+    "pages/Information/index/index",
+    "pages/Information/bill/px",
+    "pages/Information/FAQ/index3/index3",
+    "pages/Information/FAQ/index4/index4",
+    "pages/Information/binding/index2",
+    "pages/Information/feedback/kk/kk",
+    "pages/Information/money/index",
+    "pages/Information/myshop/IShop/IShop",
+    "pages/Information/myshop/Stick/Stick",
+    "pages/Information/Pay/deposit/deposit",
+    "pages/Information/Pay/recharge/recharge",
+   
+    "pages/backstage/treatment/treatment",
+    "pages/backstage/complain/complain",
+    "pages/backstage/setting/setting",
+    "pages/backstage/message_affiche/message_affiche",
+    "pages/backstage/feedback/feedback",
+    "pages/backstage/setting-details/setting-details",
+    "pages/backstage/personage/personage",
+    "pages/backstage/auditor/auditor",
+    "pages/backstage/auditorinfo/auditorinfo",
+    "pages/backstage/state_select/state_select"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FD9B56",
+    "navigationBarTitleText": "云赚钱",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#7D889A",
+    "list": [
+
+    {
+      "pagePath": "pages/make_money/home/home",
+      "text": "首页",
+      "iconPath": "image/main.jpg",
+      "selectedIconPath": "image/main.jpg"
+    },
+    {
+      "pagePath": "pages/backstage/setting/setting",
+      "text": "消息",
+      "iconPath": "image/message.jpg",
+      "selectedIconPath": "image/message.jpg"
+    },
+
+    {
+      "pagePath": "pages/Information/index/index",
+      "text": "我的信息",
+      "iconPath": "image/me.jpg",
+      "selectedIconPath": "image/me.jpg"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
+
+

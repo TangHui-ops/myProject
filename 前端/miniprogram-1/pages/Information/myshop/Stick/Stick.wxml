@@ -1,0 +1,47 @@
+<!--Stick/Stick.wxml-->
+<view class="boss">
+	<view class="title">
+		<text>周期价格</text>
+	</view>
+
+	<view class="jiage">
+		<view class="table">
+			<view class="tr">
+				<radio-group bindchange="radioChange">
+					<label wx:for="{{items}}" wx:key="value">
+						<view class="th">
+							<radio value="{{item.value}}" checked="true" />{{item.name}}
+						</view>
+					</label>
+				</radio-group>
+			</view>
+		</view>
+	</view>
+  
+	<view class="hejijine">
+		金额合计：{{counter}}
+	</view>
+
+	<view class="weizhi">
+		置顶位置：<text style="color:red;font-size:12px" bindtap="text_click" >点击查看位置</text>
+	</view>
+
+	<view class="querenaniu" bindtap="quedingClike">
+		<button style="width:300px; height:50px; color:#FFFFFF; background-color: #0078D7 ; ">确定支付</button>
+	</view>
+
+	<view class="zhuyi">
+		<text>
+      注意：\n
+      1.置顶店铺成功后未到期前可以续期，时间自动累加；\n
+      2.置顶店铺无法暂停，请充分评估后再做选择使用；
+    </text>
+	</view>
+
+	<!-- 隐藏窗口 -->
+	<modal title="置顶位置" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel"  >  
+		<view >
+			<image class="image" src="/images/tp.png" mode='aspectFill' style="width:100%;max-height:72vh; height:1000rpx " ></image>
+		</view>
+	</modal>
+</view>

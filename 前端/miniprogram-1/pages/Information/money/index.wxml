@@ -1,0 +1,66 @@
+
+ <form catchsubmit="formSubmit" catchreset="formReset">
+   <view>
+     <view class="a"></view>
+     <view class="b" hover-class="hover_class">
+           <text class="left">兑换数量 </text>
+           <input class="b-input" type="number" auto-focus placeholder="请输入数量"/>个
+          
+     </view>
+     <view class="c">
+           <text>兑换比例为1:1</text>
+     </view>
+
+<radio-group name="radio">
+     <view class="d">
+        <text class="top">任务币:
+         <text class="bottom" selectable >余额：</text>
+         </text>
+          <label><radio color="#038387" value="radio1"/></label>
+     </view>
+
+     <view class="e">
+        <text class="top">收入分红:
+        <text class="bottom">余额：</text>
+        </text>
+          <label><radio color="#038387" value="radio2"/></label>
+       
+     </view>
+        </radio-group>
+     <view class="f">
+        <button form-type="submit">充币</button>
+     </view>
+
+     <view class="g">
+     
+           注意:欢乐币可用来玩鸣蚁帮扶的小游戏或兑换
+           奖品，但比党换不可通，无论是任务币还是收入
+           分红，兑换成欢乐币后天法再兑换回任务币或收
+           入分红，您需要了解比兑换规则后再兑换，一旦
+           兑换即表明你已经了解并同意此规则，否则请不
+           要兑换。
+           
+           </view>
+           </view>
+           </form>
+      
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

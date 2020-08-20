@@ -1,0 +1,23 @@
+<!--pages/personal/personal.wxml-->
+<!-- <view class="readlog-container">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class="userinfo">
+      <view class="head">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>  
+    </view>
+    <view class="userContent">
+      <view class=".userinfo-nickname">
+        <open-data type="userNickName"></open-data> 
+        <view class="nowTime">{{nowTime}}</view>
+      </view>
+      <view class="content" bindtap="handleContext">
+        tip：只有当前用户在此群内才能拉取到群名称
+        tip：关于open-gid的获取请使用 wx.getShareInfo示例代码.......
+      </view>
+    </view>
+  </block>
+</view> -->
+<t-messages context='tip: 各个操作系统的空格标准并不一致我就看好的会计师可视对讲覅乌尔禾发快递是否会还胡二维空间很大塑复合物顺丰科技是否合适的开发'/>
+<t-messages />
+ 

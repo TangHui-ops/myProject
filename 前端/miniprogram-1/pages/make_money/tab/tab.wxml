@@ -1,0 +1,105 @@
+<!--pages/tab/tab.wxml-->
+<view class="tab-control">
+	<view class="titles">
+		<view class="item {{indexCurr == index ? 'active':''}}" bindtap="hearItemClick" data-index="{{index}}" wx:for="{{navbarTitle}}" wx:key="item">
+			<text>{{item}}</text>
+		</view>
+	</view>
+
+	<view class="cons">
+		<view class="{{0 == indexCurr ? 'cons_message':'cons_annou'}}">
+			<view class="big_zuijin">
+				<view class="outer" wx:for="{{missionList}}" wx:key="index">
+					<view>
+						<image src="{{item.tp}}" class="tp"></image>
+					</view>
+					<view class="wz">
+						<view class="ft">{{item.missionHeadline}}</view>
+						<view class="mz">{{item.mission_st}}</view>
+						<view class="bh">{{item.mission_no}}</view>
+						<view class="dj">{{item.mission_money}}</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+
+
+
+
+
+
+
+		<view class="{{1 == indexCurr ? 'cons_message':'cons_annou'}}">
+			<view class="big_zuijin">
+				<view class="outer" wx:for="{{zonghe}}" wx:key="index">
+					<view>
+						<image src="{{item.tp}}" class="tp"></image>
+					</view>
+					<view class="wz">
+						<view class="ft">{{item.title}}</view>
+						<view class="mz">{{item.nowTime}}</view>
+						<view class="bh">{{item.content}}</view>
+						<view class="dj">{{item.dj}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+
+
+		<view class="{{2 == indexCurr ? 'cons_message':'cons_annou'}}">
+			<view class="big_zuijin">
+				<view class="outer" wx:for="{{youxian}}" wx:key="index">
+					<view>
+						<image src="{{item.tp}}" class="tp"></image>
+					</view>
+					<view class="wz">
+						<view class="ft">{{item.title}}</view>
+						<view class="mz">{{item.nowTime}}</view>
+						<view class="bh">{{item.content}}</view>
+						<view class="dj">{{item.dj}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+
+
+
+		<view class="{{3 == indexCurr ? 'cons_message':'cons_annou'}}">
+			<view class="big_zuijin">
+				<view class="outer" wx:for="{{renqi}}" wx:key="index">
+					<view>
+						<image src="{{item.tp}}" class="tp"></image>
+					</view>
+					<view class="wz">
+						<view class="ft">{{item.title}}</view>
+						<view class="mz">{{item.nowTime}}</view>
+						<view class="bh">{{item.content}}</view>
+						<view class="dj">{{item.dj}}</view>
+
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="{{4 == indexCurr ? 'cons_message':'cons_annou'}}">
+			<view class="big_zuijin">
+				<view class="outer" wx:for="{{pingguo}}" wx:key="index">
+					<view>
+						<image src="{{item.tp}}" class="tp"></image>
+					</view>
+					<view class="wz">
+						<view class="ft">{{item.title}}</view>
+						<view class="mz">{{item.nowTime}}</view>
+						<view class="bh">{{item.content}}</view>
+						<view class="dj">{{item.dj}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

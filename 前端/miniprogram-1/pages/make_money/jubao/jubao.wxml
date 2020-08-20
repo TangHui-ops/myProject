@@ -1,0 +1,16 @@
+  <swiper-item>
+   <view class="one">
+    <view class="two">
+    <input placeholder="请输入反馈内容" type="text" ></input>
+    </view>
+     <view class="three">
+         <view class="weui-uploader__input-box">
+         <view class="weui-uploader__input" bindtap="chooseImage"></view>
+     </view>
+     </view>
+    <view class="frou">
+     <navigator url="../as/as" class="zi">如果无法上传图片请点此处</navigator>
+    <button class="anniu">提交</button>
+    </view>
+   </view>
+</swiper-item>

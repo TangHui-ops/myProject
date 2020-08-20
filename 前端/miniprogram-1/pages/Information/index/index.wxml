@@ -1,0 +1,71 @@
+<!--index.wxml-->
+
+
+
+<view class="container">
+  <view class="userinfo">
+  
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+    
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+     </view>
+  </view>
+
+<view class="bj">
+   <view class="fd">
+    <text class="y1">用户等级:{{999}}</text>
+    <text class="y2">用户ID:傻逼</text>
+
+
+<view  class="y3">
+  <text>余额:</text>
+  <text>{{userid.userBalance}}</text>
+  <text class="y4">|</text>
+  <text>保证金:</text>
+   <text>{{122122}}</text>
+</view>
+
+
+
+  <view class="w">
+    <text class="re1" bindtap="Cilek1" >充值</text>
+    <text class="a6">/</text>
+    <text class="re2" bindtap="Cilek2" >提现</text>
+    <text class="re3" bindtap="Cilek3" >提现</text>
+  </view>
+</view>
+</view>
+
+<view class="jk">
+    <view class="usermotto" style="text-indent:1em">
+      <image src="/image/zhangdan.png" style="width:35rpx; height:35rpx"></image>
+      <text bindtap="Click_the_jump"  style="margin-left:20rpx">收支账单</text>
+    </view>
+
+    <view class="usermotto1" style="text-indent:1em">
+      <image src="/image/umidd17.png" style="width:40rpx; height:40rpx"></image>
+      <text bindtap="Click_the_jump1" style="margin-left:20rpx">支付宝绑定</text>
+    </view>
+
+    <view class="usermotto2" style="text-indent:1em">
+    <image src="/image/wodedianpu.png" style="width:35rpx; height:35rpx"></image>
+      <text bindtap="Click_the_jump2" style="margin-left:20rpx">我的店铺</text>
+    </view>
+
+    <view class="usermotto3" style="text-indent:1em">
+    <image src="/image/woyaofankui.png" style="width:35rpx; height:35rpx"></image>
+      <text bindtap="Click_the_jump3" style="margin-left:20rpx">我要反馈</text>
+    </view>
+
+    <view class="usermotto4"style="text-indent:1em">
+    <image src="/image/wenti.png" style="width:35rpx; height:35rpx"></image>
+      <text bindtap="Click_the_jump4" style="margin-left:20rpx">常见问题</text>
+  
+</view>
+     <view>
+         <button type="submit">退出</button>
+     </view>
+</view>

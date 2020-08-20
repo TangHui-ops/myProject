@@ -1,0 +1,98 @@
+<!--pages/tpyz/tpyz.wxml-->
+
+<!-- <view class="A">
+   <text  class="sctp">上传图片</text>
+   <navigator url="/pages/task/task.js" class="rwxq">任务详情</navigator>
+</view>
+
+<view class="fgx"></view> -->
+
+<swiper-item>
+	<view bindtap="handleClick" wx:for="{{texts}}" wx:if="{{insd}}" wx:key="index" class="tui">
+		<view class="wenben">
+			<view class="one">
+				<view class="fbf">{{item.fbf}}<text>{{taskDetail.userName}}</text></view>
+				
+				
+				<view class="bianhao">{{item.bianhao}}<text>{{taskDetail.missionNo}}</text></view>
+			</view>
+			<view class="one">
+				<view class="fbf">{{item.leibie}}<text>{{taskDetail.missionTypeName}}</text></view>
+				<view class="bianhao">{{item.danjia}}<text>{{taskDetail.missionMoney}}</text></view>
+			</view>
+			<view class="yanzhen" wx:if="{{centent_Show_verification ? true:false}}">{{item.yanzhen}}<text wx:if="{{centent_Show_verification ? true:false}}">{{taskDetail.missionText}}</text></view>
+			<view class="beizhu" wx:if="{{centent_Show_remark ? true:false}}">{{item.beizhu}}<text wx:if="{{centent_Show_remark ? true:false}}">{{taskDetail.missionVerify}}</text></view>
+		</view>
+
+
+	</view>
+	<form bindsubmit="addTrialLog">
+		<view class="B">
+			<view class="yzt">验证图</view>
+			<view class="weui-uploader">
+
+				<view class="weui-uploader__hd">
+
+
+
+				</view>
+
+				<view class="weui-uploader__bd">
+
+					<block wx:for="{{imagesList}}" wx:key="*this">
+
+						<view class="weui-uploader__file">
+							<!--  -->
+
+							<image class="weui-uploader__img" src="{{item}}"></image>
+
+						</view>
+
+					</block>
+
+					<view class="weui-uploader__input-box"wx:if="{{centent_Show ? true:false}}">
+
+						<input class="weui-uploader__input js_file" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="" bindtap='uploader' name="images" name='trialS'></input>
+
+					</view>
+
+				</view>
+
+			</view>
+
+
+			<view class="ctp">传图片</view>
+
+			<view class="C">
+				<navigator url="/pages/wfsc/wfsc" class="dianji">如果无法上传图片请点击此处</navigator>
+			</view>
+
+			<view class="D">
+				<text class="jixu">注：如需要上传多张验证图，传完第一张后，点击右侧箭头可继续上传下一张，最多可上传五张。</text>
+			</view>
+
+			<textarea class="ssk" placeholder="请输入文字验证" maxlength="1000" name='trialText'/>
+
+			<text class="tishi">提示：诚信做单，骗单将被罚款，严重者封号。</text>
+    
+		<view class="diuqi" bindtap="handleShowmodal">
+	<image src="../../style/im/diuqi.png"></image>
+</view>
+    
+     <view class="scyz"
+     form-type="submit" type="primary"
+					name='trialCt'
+					bindtap="subtn"                          >
+     <image src="../../style/im/scyz.png"></image>
+     </view>
+   
+    <view bindtap="fhsy" class="fhsy">
+    <image src="../../style/im/fhsy.png"></image>
+      
+    </view> 
+  </view>
+   </form> 
+
+  </swiper-item>
+
+ 

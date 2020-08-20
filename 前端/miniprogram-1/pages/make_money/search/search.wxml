@@ -1,0 +1,36 @@
+<view>
+<view class="srk">
+	<icon type="search"></icon>
+	<input placeholder="请输入关键字" type="text" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping"></input>
+	<view class="aaa">
+	</view>
+	<view>
+	</view>
+</view>
+<button class="ss" size="mini" bindtap="seek">搜索</button>
+</view>
+
+
+<view class="big_zuijin" wx:if="{{centent_Show ? true:false}}">
+	<view class="outer" wx:for="{{newMissionList}}" wx:key="index" bindtap="NewDetail" data-detailid="{{item.missionId}}">
+		<view>
+			<image src="{{item.missionTypePicture}}" class="tp"></image>
+		</view>
+		<view class="wz">
+			<view class="pb">
+				<view class="ft">{{item.missionTypeName}}</view>
+				<view class="mz">{{item.missionHeadline}}</view>
+			</view>
+			<view class="pb_content">
+				<view class="bh">编号：{{item.missionNo}}</view>
+				<view class="dj">单价：{{item.missionMoney}}</view>
+			</view>
+		</view>
+
+		<view class="spx"></view>
+	</view>
+</view>
+
+<view class="search_no" wx:if="{{!centent_Show ? true:false}}">
+	<text>很抱歉,没有找到您要搜索的资料/(ㄒoㄒ)/~~</text>
+</view>

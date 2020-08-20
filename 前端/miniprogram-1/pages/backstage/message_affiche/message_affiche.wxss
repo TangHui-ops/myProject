@@ -1,0 +1,38 @@
+/* pages/message_affiche/message_affiche.wxss */
+page{
+  background-color: #F8F8F8;
+}
+.container{
+  padding: 0rpx;
+}
+.input_title{
+  margin-top: 40rpx;
+  width: 700rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border: 2rpx black solid;
+}
+
+.context {
+  margin-top: 40rpx;
+  background-color: #fff;
+}
+textarea {
+  width: 700rpx;
+  margin-top: 10rpx;
+  padding: 25rpx 0;
+  border: 2rpx black solid;
+}
+
+button{
+  margin-top: 35rpx;
+  margin-right: 20rpx;
+  float: right;
+  border: #CCCCCC 2rpx solid;
+}
+.send_btn{
+  color: #fff;
+  background-color:#0085B8 ;
+}
+
+

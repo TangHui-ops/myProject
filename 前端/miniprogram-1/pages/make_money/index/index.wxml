@@ -1,0 +1,74 @@
+<!--index.wxml-->
+<view class="tab-control">
+  <view class="titles">
+    <view class="item {{indexCurr == index ? 'active':''}}" 
+      bindtap="hearItemClick"
+      data-index="{{index}}"  
+      wx:for="{{navbarTitle}}" wx:key="item">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="advertising">
+    <scroll-view class="advertising_2" scroll-y="true" >置顶店铺，快速成交，位置有限，先用先得</scroll-view>
+  </view>
+  <view class="cons">
+    <view class="{{0 == indexCurr ? 'cons_message':'cons_annou'}}" >
+      <view class="zhk">
+        <block wx:for="{{auditList}}" wx:key="index">
+          <view class="huakuai" data-index="{{index}}" bindtap="AuditType">{{item}}</view>
+        </block>
+      </view>
+
+      <view class="zzz"></view>
+      <view class="tui" wx:for="{{trialLogs}}" wx:key="index" > 
+        <image src="{{item.missionTypePicture}}" class="tupian"/>
+        <view class="wenben" data-trialId='{{item.trialId}}' bindtap="handleDetail">
+	        <view class="wenben_1">{{item.missionTypeName}}</view>
+          <view class="wenben_2">{{item.missionHeadline}}</view>
+          <view class="wenben_3">编号：{{item.missionNo}}<text style="padding-left:10rpx">单价：{{item.missionMoney}}</text></view>
+        </view>
+        <button size="mini" bindtap="shanchu" class="shanchu" data-trialId='{{item.trialId}}' 
+          data-index='{{index}}'>删除</button>
+      </view>
+    </view>
+
+    <view class="{{1 == indexCurr ? 'cons_message':'cons_annou'}}" >
+      <view class="outer" wx:for="{{trialLogs}}" wx:for-item="trialItem" wx:key="index" class="tui">
+        <image src="{{trialItem.missionTypePicture}}" class="tupian"/>
+        <view class="wenben" data-trialId='{{trialItem.trialId}}' bindtap="handleDetail">
+	        <view class="wenben_1">{{trialItem.missionTypeName}}</view>
+          <view class="wenben_2">{{trialItem.missionHeadline}}</view>
+          <view class="wenben_3">编号：{{trialItem.missionNo}}<text style="padding-left:10rpx">单价：{{trialItem.missionMoney}}</text></view>
+        </view>
+        <button size="mini" bindtap="shanchu" class="shanchu" data-trialId='{{trialItem.trialId}}' 
+          data-index='{{index}}'>删除</button>
+      </view>
+    </view> 
+
+    <view class="{{2 == indexCurr ? 'cons_message':'cons_annou'}}" >
+      <view class="outer" wx:for="{{publishList}}" wx:key="index" class="tui">
+        <image src="{{item.missionTypePicture}}" class="tupian"/>
+        <view class="wenben" data-missionId='{{item.missionId}}' bindtap="handleDetail2">
+	        <view class="wenben_1">{{item.missionTypeName}}</view>
+          <view class="wenben_2">{{item.missionHeadline}}</view>
+          <view class="wenben_3">编号：{{item.missionNo}}<text style="padding-left:10rpx">单价：{{item.missionMoney}}</text></view>
+        </view>
+        <button size="mini" bindtap="shanchu2" class="shanchu" data-missionId='{{item.missionId}}' 
+          data-index='{{index}}'>删除</button>
+      </view>
+    </view> 
+  </view>
+</view>
+
+
+
+<view class="jdzq" bindtap="makeMoney">
+  <image src="../sucai/jdzq.png"  class="aa" bindtap="jdzq"/>
+</view>
+<!-- <view class="dktz">
+  <image src="../sucai/dktz.png"  class="bb" bindtap="dktz"/>
+</view> -->
+<view class="fhsy" bindtap="indexHome">
+  <image src="../sucai/fhsy.png"  class="cc" bindtap="fhsy"/>
+</view>
+

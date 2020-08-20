@@ -1,0 +1,59 @@
+/* pages/feedback/childCpns/t-messages/t-messages.wxss */
+page{
+  display: block;
+  min-height: 100%;
+  background-color: #fff;
+}
+.readlog-container {
+  width: 100%;
+  height: 175rpx;
+  display: flex;
+  /* box-sizing: border-box; */
+  margin-top: 20rpx;
+  /* border-bottom: 1rpx solid black; */
+  border-bottom: 10rpx solid #eee;
+}
+.userinfo {
+  width: 120rpx;
+  padding: 10rpx;
+  /* display: flex; */
+}
+.head{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 100%; 
+  overflow:hidden;
+  margin-top: 20rpx;
+  border: 12rpx solid rgba(255, 255, 255, 0.3);
+  /* flex: 1; */
+}
+.userinfo-nickname{
+  margin-top: 15rpx;
+}
+.userContent {
+  width: 80%;
+  padding: 10rpx;
+}
+.nowTime{
+  color:gray;
+  font-size: 25rpx;
+  float: right;
+}
+.context{
+  font-size: 20rpx;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+
+.userinfo-avatar {
+  width: 115rpx;
+  height: 115rpx;
+  margin: 40rpx 0 25rpx;
+  border-radius: 50%;
+  border: 12rpx solid rgba(255, 255, 255, 0.3);
+}

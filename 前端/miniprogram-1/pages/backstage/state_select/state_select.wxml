@@ -1,0 +1,39 @@
+<!--pages/auditorinfo/auditorinfo.wxml-->
+<view class="auditor_Info">
+<block wx:for="{{type}}" wx:key="{{index}}" wx:for-item="item">
+  <view class="user"> 
+    <view class="userinfo">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userName" >
+        <view>状态记录ID:{{item.userStateId}}</view>
+        
+        <view>用户名：{{userInfo.userName}}</view>
+      </view>
+    </view>
+    <view class="taskTypes">
+    </view>
+    <view class="box1">操作原因</view>
+    <scroll-view scroll-y="true">
+      
+
+      <view class="task_list">
+<view class="content_wrap">
+        {{item.userStateReason}}
+      </view>  
+
+<view class='a'>开始时间：{{item.userStateDate}}</view>
+<view class="m">结束时间：{{item.userStateDt}}</view>
+
+
+        <view class="audit_image">
+          <image wx:for="{{pictures}}" wx:key="{{index}}" mode="aspectFit" src="{{item}}" 
+             data-index="{{index}}" bindtap="handleImage"/>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+  </block>
+</view>

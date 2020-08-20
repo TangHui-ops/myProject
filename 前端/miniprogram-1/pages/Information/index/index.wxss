@@ -1,0 +1,123 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  border-bottom: 1rpx solid #787878;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ffff;
+}
+
+.usermotto1 {
+  border-bottom: 1rpx solid #787878;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ffff;
+}
+
+.usermotto2 {
+  border-bottom: 1rpx solid #787878;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ffff;
+}
+
+.usermotto3 {
+  border-bottom: 1rpx solid #787878;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ffff;
+}
+
+.usermotto4 {
+  border-bottom: 1rpx solid #787878;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ffff;
+} 
+
+
+.re1 {
+  margin-right: 40rpx;
+  color: #ED1C24;
+}
+
+.a6 {
+  margin-right:220rpx;
+  color: #ED1C24;
+}
+
+ .re2 {
+  margin-left: -180rpx;
+  color: #ED1C24;
+} 
+
+
+.re3 {
+  padding-left: 100rpx;
+  color: #ED1C24;
+}
+
+.w{
+  margin-left: 80rpx;
+}
+
+
+
+.fd{
+  margin-left:80rpx ;
+  
+}
+
+
+.container {
+  background: #FD9B56;
+  padding:0px;
+}
+
+.bj{
+  border: 1px solid #FDF7E3;
+  background-color: #FDF7E3;
+  padding: 10px;
+}
+
+.y1{
+  padding:40rpx;
+}
+.y2{
+  padding: 40rpx;
+}
+.y3{
+  margin:40rpx;
+}
+.y4{
+  padding: 30rpx;
+}
+
+page{
+  background-color: #F0F0F0;
+}
+
+.jk{
+  margin-top: 20rpx;
+}
+
+button{
+  background: #D96F63;
+  margin: 40rpx;
+}
+

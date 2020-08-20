@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-messages":"/component/t-messages/t-messages"
+  },
+  "navigationBarTitleText": "反馈",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

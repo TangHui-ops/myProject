@@ -1,0 +1,74 @@
+<!--IShop/IShop.wxml-->
+<view class="boss">
+
+	<!-- 头部 -->
+	<view class="toubu">
+
+		<view class="touxiang">
+			<image src="/image/touxiang2.png" style="width:75px; height:75px"></image>
+		</view>
+		
+
+		<view class="zhiliao">
+
+			<view class="mc">
+				<text>用户名称：{{list.userName}}</text>
+			</view>
+			<view class="id">
+				<text>用户ID：{{list.userId}} </text>
+			</view>
+
+			<!-- 按钮 -->
+			<view class="aniu">
+				<button size="mini" class="gz" bindtap="guanzhu">关注</button>
+				<button size="mini" class="dp" type="primary" bindtap="dianpuzd">店铺置顶</button>
+			</view>
+
+		</view>
+	</view>
+
+	<!-- 身体 -->
+
+	<view wx:for="{{userData}}" wx-for-index="index" wx-for-item="IShop">  
+{{index}}: {{IShop.name}}
+	</view>
+	
+	<view class="shenti">
+		<view class="table">
+			<view class="tr">
+				<view class="th ">发任务：<text>{{ay[0].missionId}}个</text></view>
+				<view class="th ">总发单：<text>{{ay[0].missionNum}}个</text></view>
+				<view class="th ">总成交：<text>{{ay[0].missionNum}}个</text></view>
+			</view>
+			<view class="tr">
+				<view class="th ">被投诉：<text>{{k}}个</text></view>
+				<view class="th ">被申诉：<text>{{a}}个</text></view>
+				<view class="th ">被举报：<text>{{b}}个</text></view>
+			</view>
+			<view class="tr">
+				<view class="th ">接任务：<text>{{jierenwu}}个</text></view>
+				<view class="th ">申诉：<text>{{b}}个</text></view>
+				<view class="th ">投诉：<text>{{k}}个</text></view>
+			</view>
+		</view>
+	</view>
+
+
+<view>
+		<view class="swiper-tab">
+			<view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">进行中</view>
+			<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">已下架（48小时）</view>
+		</view>
+
+		<swiper current="{{currentTab}}" duration="300" bindchange="swiperTab">
+			<swiper-item>
+				<view>{{ay[0].missionId}}</view>
+			</swiper-item>
+			<swiper-item>
+				<view>{{ay[1].missionId}}</view>
+			</swiper-item>
+		</swiper>
+	</view>
+
+	
+</view>

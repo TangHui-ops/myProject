@@ -1,0 +1,36 @@
+<!--pages/deposit/deposit.wxml-->
+<view class="box">
+ <form bindsubmit='searchBox'>
+    <view class="profit">
+      <text>收入分红</text>
+      <input name="yue" placeholder="{{userid.userBalance}}元" class="input" disabled="false"/>
+    </view>
+    
+    <view class="money">
+      <text>提现金额</text>
+      
+      <input name="qie"  placeholder="请输入提现金额 (元)" bindinput="bindMessage" class="input">
+        
+      </input>
+    </view>
+
+    <view class="way">
+      <text>提现方式</text>
+      <radio checked="true">微信</radio>
+      
+    </view>
+    
+      <text class="hint_text">
+      温馨提示：
+    1、提现金额需是大于等于1.0元小于等于200元之间的整数，因需要给上级返利10%，所以账户余额需大于等于1.1元方能提现。
+    2、提现时，系统将自动扣除10%的红利给到你的推荐人，同样，你推荐的人在提现时一样返你10%，推荐越多红利越多。
+    3、每天可以提现三次，有时因网络的原因会有几秒到几分钟的延迟，请注意查收。
+    </text> 
+
+    <button  class='deposit' form-type='submit'>提现</button>
+     
+
+  </form>
+</view>
+
+

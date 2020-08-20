@@ -1,0 +1,8 @@
+@import "../abc/abc.wxss";
+
+.outer{
+  width: 100%;
+}
+.big_zuijin{
+  width: 100%;
+}

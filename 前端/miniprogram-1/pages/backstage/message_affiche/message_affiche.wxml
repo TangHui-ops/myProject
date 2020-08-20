@@ -1,0 +1,19 @@
+<!--pages/message_affiche/message_affiche.wxml-->
+<view class="container" bindtap="inputclick">
+  <view class="page_context">
+    <form bindsubmit="bindFormSubmit">
+      <view class="page_title">
+        <view class="page_input">
+          <input type="text" name="input_title" class="input_title" value="{{input_title}}" placeholder="请输入标题"/>
+        </view>
+      </view>
+
+      <view class="context">
+        <textarea placeholder="请输入内容！！" bindinput="inputs" maxlength="500"
+          name="areContext" auto-focus style="height: 17em" value="{{areContext}}"></textarea>
+      </view>
+      <button size="mini" class="send_btn" form-type="submit" disabled="{{disabled}}"> 发送公告 </button>
+      <button size="mini" class=" cancel_btn" form-type="submit" bindtap="cancel_btn"> 取消 </button> 
+    </form>
+  </view>
+</view>

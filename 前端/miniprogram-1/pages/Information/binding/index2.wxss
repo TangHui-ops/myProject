@@ -1,0 +1,64 @@
+/* pages/index2/index2.wxss */
+view{
+  margin-top: 5px;
+  display:flex;
+  margin-bottom: 5px;
+}
+input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+button{
+  height: fit-content;
+  font-family: 宋体,sans-serif;
+  color: white;
+  width: 80%;
+  background-color: cornflowerblue;
+}
+.alipay{
+  /*line-height: 30px;
+  border-bottom: 1px solid #dadada;*/
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  height: 88rpx;
+  border-top: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name{
+  /*margin-bottom: 3px;
+  line-height: 30px;
+  border-bottom: 1px solid hsl(0, 0%, 85%);*/
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 25rpx;
+}
+.alipay_left{
+  margin-left: 25rpx;
+  margin-top:-5px;
+}
+.name_left{
+  margin-left: 25rpx;
+}
+.right{
+  margin-right: 25rpx;
+}
+.but{
+  display:flex;
+  margin-top:30px;
+}
+.remark{
+  margin: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  font-size: smaller;
+  color: #F56364;
+  white-space: pre-wrap;
+}

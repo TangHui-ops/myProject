@@ -1,0 +1,52 @@
+<!--pages/rwxq/rwxq.wxml-->
+<view class="renwu">任务详情</view>
+<view class="weui-form-preview__bd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.title}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.missionHeadline}}</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.publisher}}</label>
+					<text class="weui-form-prevew__value" style="float:left" >{{taskDetail.userName}}</text>
+        
+				</view>
+        	<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.number}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.missionNo}}</text>
+				</view>
+        	<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.category}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.missionTypeName}}</text>
+				</view>
+        	<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.unitprice}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.missionMoney}}</text>
+				</view>
+        	<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.verification}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.missionVerify}}</text>
+				</view>
+        	<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.remark}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.missionText}}</text>
+				</view>
+        <view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.zhidingdaoqi}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.trialT}}</text>
+				</view>
+        <view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">{{task1.deadline}}</label>
+					<text class="weui-form-preview__value">{{taskDetail.trialCt}}</text>
+				</view>
+			</view> 
+			<view class="backgroundcolor1">				
+					<view class="yanzheng">验证图</view>
+					<block wx:for="{{img}}" wx:key="item">
+					<image src="{{item}}" class="wenbenkuang"></image>
+					</block>
+			</view>
+
+			<view class="backgroundcolor3">
+          <button class="btg" bindtap="btg">不通过</button>
+          <button class="tg" bindtap="tg">通过</button>
+          </view>

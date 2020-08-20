@@ -1,0 +1,21 @@
+/* pages/recent_treatment/recent_treatment.wxss */
+.swiper-tab{
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-weight: bold;
+}
+.swiper-tab-item{
+  display: inline-block;
+  width: 33.33%;
+}
+.active{
+  color:#3A59E8;
+  border-bottom: 4rpx solid black;
+}
+
+.swiper{
+  min-height: 100vh;
+}

@@ -1,0 +1,120 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wxeba7b2833be3b701",
+	"projectname": "miniprogram-1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/backstage/personage/personage",
+					"pathName": "pages/backstage/personage/personag",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/backstage/treatment/treatment",
+					"pathName": "pages/backstage/treatment/treatment",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/make_money/abc/abc",
+					"pathName": "pages/make_money/abc/abc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/make_money/logs/logs",
+					"pathName": "pages/make_money/logs/logs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/make_money/search/search",
+					"pathName": "pages/make_money/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/make_money/tpyz/tpyz",
+					"pathName": "pages/make_money/tpyz/tpyz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/make_money/rwxq/rwxq",
+					"pathName": "pages/make_money/rwxq/rwxq",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/make_money/index/index",
+					"pathName": "pages/make_money/index/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

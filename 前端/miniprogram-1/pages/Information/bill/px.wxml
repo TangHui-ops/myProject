@@ -1,0 +1,22 @@
+<!--pages/px/px.wxml-->
+<view class="box">
+<view class="box1" style="font-size:20px">提现总额</view>
+
+<view class="box2" style="font-size:20px">0元</view>
+</view>
+
+  <view  class='b'>
+    <image src="/assets/as/充值.png" style="height:20px;width:20px"/>
+    <text style="color:red">金额：1元</text>
+    <view style="text-indent:1em;font-size:15px" class="z">充值
+        <text class="t">2002/02/02 22:22:22</text>
+    </view>
+  </view>
+
+  <view class="b">
+    <image src="/assets/as/充值.png" style="height:20px;width:20px"/>
+    <text style="color:red">金额：1元</text> 
+    <view style="text-indent:1em;font-size:15px" class="z">提现
+        <view class="t">2002/02/02 22:22:23</view>
+    </view>
+  </view>

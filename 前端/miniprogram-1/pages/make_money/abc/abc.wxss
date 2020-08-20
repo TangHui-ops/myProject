@@ -1,0 +1,225 @@
+
+
+.srk {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #aaa;
+  width: 250px;
+  height: 27px;
+  margin-left: 10rpx;
+  align-items: center;
+
+}
+
+input {
+  width: 150px;
+}
+
+
+
+
+
+
+
+
+.animation-element {
+  width: 480rpx;
+  height: 650rpx;
+  background-color: #e9e5e5;
+  border: 1px solid #f3f0f0;
+  position: absolute;
+  right: -500rpx;
+}
+
+.buttom {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+.animation-button {
+  float: right;
+  line-height: 2;
+  width: 140rpx;
+  height: 20px;
+  margin: 13rpx 13rpx;
+  border: 1px solid #575252;
+  text-align: center;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+
+
+.all {
+  display: inline-block;
+  width: 80px;
+  height: 50rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.use_name {
+  font-size: 34rpx;
+  line-height: 79rpx;
+}
+
+.box {
+  border-radius: 10rpx;
+
+  line-height: 30rpx;
+  border: 1px solid #575252;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+
+  font-size: 10px;
+
+}
+
+.active-tag .box {
+  background: rgb(245, 245, 247);
+  color: rgb(132, 231, 75);
+  border: 1px solid rgb(53, 51, 51)141, 128, 128;
+}
+
+.spx {
+  border-bottom: solid 1px;
+  border-bottom-color: rgb(204, 208, 211);
+}
+
+.ss {
+  float: right;
+  margin-top: -30px;
+  margin-right: 3px;
+  color: rgb(87, 100, 218);
+
+}
+
+.types {
+  width: 100%;
+  white-space: nowrap;
+  border-bottom: solid 1px;
+  border-bottom-color: rgb(204, 208, 211);
+}
+
+.type-item {
+  font-size: 17px;
+  width: rps;
+  display: inline-block;
+  margin: 10rpx 20rpx;
+}
+
+.news {
+  padding: 20rpx 20rpx 0rpx 20rpx;
+}
+
+.news-title {
+  font-size: 20px;
+}
+
+.publish {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: rgb(219, 216, 212);
+  margin-top: 10rpx;
+}
+
+.create-tiem {
+  margin-left: 30rpx;
+}
+.active {
+  color: dodgerblue;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+}
+
+.big_zuijin {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wz {
+  margin-left: 70px;
+  margin-top: -60px;
+}
+
+.tp {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin: 10px 10px 0px 10px;
+}
+
+.pb {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: rgb(219, 216, 212);
+  margin-top: 10rpx;
+}
+
+.ft {
+  font-size: 16px;
+  color: rgb(121, 114, 114);
+  /* 超出一行文字自动隐藏 */
+  overflow:hidden; 
+  /* 文字隐藏后添加省略号 */
+  /* text-overflow:ellipsis; */
+  /* 强制不换行 */
+  white-space:nowrap;  
+}
+
+.mz {
+  font-size: 18px;
+  color: black;
+  margin-left: 50rpx;
+  /* 超出一行文字自动隐藏 */
+  overflow:hidden; 
+  /* 文字隐藏后添加省略号 */
+  /* text-overflow:ellipsis; */
+  /* 强制不换行 */
+  white-space:nowrap;  
+}
+
+.pb_content{
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: rgb(219, 216, 212);
+  margin-top: 10rpx;
+  margin-left: 0rpx;
+}
+
+
+.bh {
+  font-size: 15px;
+  color: rgb(121, 114, 114);
+  margin-left: 8rpx;
+}
+
+.dj {
+  font-size: 15px;
+  color: rgb(121, 114, 114);
+  margin-left: 20rpx;
+}
+
+.spx {
+  margin-top: 10px;
+}
+
+.outer{
+  width: 100%;
+}
+
+.button {
+  float: right;
+  margin-top: -38px;
+  margin-right: 5px;
+
+}

@@ -1,0 +1,41 @@
+<form catchsubmit="formSubmit" catchreset="formReset">
+ <view class="alipay">
+    <text space="emsp" class="alipay_left">支付宝账号：</text>
+    <input type="number" confirm-type="next" name="Alipay" placeholder="请输入手机号11位"  maxlength="11" bindinput="alipay_input" />
+    <text class="right"></text>
+  </view>
+
+  <view class="alipay">
+    <text space="emsp" class="alipay_left">输入验证码：</text>
+    <input type="number" confirm-type="next" name="AuthCode" placeholder="请输入6位数字"  maxlength="6" bindinput="authcode_input" />
+    <text class="right"></text>
+  </view>
+
+  <!-- <view class="name">
+    <text  class="name_left" space="emsp">真实姓名</text>
+    <input type="text" bindinput="getuserName" name="userName" placeholder="请输入姓名" 
+    bindinput="inputname"/>
+    <text class="right"></text>
+  </view> -->
+
+  <view class="but">
+    <button formType="submit"  >获取验证码</button>
+  </view>
+
+  <view class="but">
+    <button bindtap="bindalipay">确定绑定支付宝</button>
+  </view>
+</form>
+
+  
+  <view class="remark">
+  注：绑定支付宝请务必遵循以下原则，否则将造成提现失败！！！
+  1.真实姓名一定要填写支付宝账号所对应的身份证上面的姓名，不要填写昵称；
+  2.支付宝账号请填写您注册支付宝时的账号，也就是您支付宝账户头像下方显示的那个账号，您用邮箱注册的支付宝账户就填写邮箱账号，不要填写绑定的手机号，如果是用手机号注册的账号可以填写手机号；
+  3.如果您拥有多个支付宝账户且绑定了同一手机号，提现时请填写邮箱账号，不要填写手机号；
+  4.支付宝账户只能修改一次，请勿随意改动。
+  特别提醒！账户修改后只对修改之后的相关操作产生效力，如修改之前有进行中的相关操作将还会按原来的账户执行。例如您之前进行了保证金申退，修改账户后，需要取消申退后再重新申请，才会更新为新的账户，否则钱款还会返到原来的账户。
+  </view>
+
+
+

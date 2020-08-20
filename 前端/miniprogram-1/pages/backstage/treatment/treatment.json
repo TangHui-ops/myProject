@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+   "record":"/component/record/record"
+  },
+  "navigationBarTitleText": "近期处理"
+}

@@ -1,0 +1,106 @@
+<!--pages/shenhe/shenhe.wxml-->
+<view class="swiper-tab">
+	<text wx:for="{{head}}" data-auditId="{{item.auditId}}" data-idx="{{item.auditId-1}}" class="swiper-tab-item {{currentTab==item.auditId-1 ? 'active' : ''}}" wx:key="unique" bindtap="clickTab">{{item.auditName}}</text>
+
+</view>
+
+
+
+
+<swiper style="height:1000px" current="{{currentTab}}" duration="300" bindchange="swiperTab" >
+	<block>
+		<swiper-item>
+			<view bindtap="handleClick" wx:for="{{texts}}" wx:if="{{insd}}" wx:key='index' class="tui" data-trialId="{{item.trialId}}">
+				<image src="{{item.missionTypePicture}}" class="tupian" />
+				<view class="wenben">
+					<view class="wenben_1">{{item.userName}}</view>
+					<view class="wenben_2">任务类型：{{item.missionTypeName}}</view>
+					<view class="wenbe_34">
+						<view class="wenben_3">接收时间：{{item.trialT}}</view>
+						<view class="wenben_4">完成时间：{{item.trialCt}}</view>
+					</view>
+				</view>
+			</view>
+
+			<button class="ckgd">查看更多</button>
+		</swiper-item>
+<swiper-item>
+			<view data-trialId="{{item.trialId}}" bindtap="handleClick" wx:for="{{texts}}" wx:if="{{insd}}" wx:key='index' class="tui">
+				<image src="{{item.missionTypePicture}}" class="tupian" />
+				<view class="wenben">
+					<view class="wenben_1">{{item.userName}}</view>
+					<view class="wenben_2">任务类型：{{item.missionTypeName}}</view>
+					<view class="wenbe_34">
+						<view class="wenben_3">接收时间：{{item.trialT}}</view>
+						<view class="wenben_4">完成时间：{{item.trialCt}}</view>
+					</view>
+
+					<view class="xhx"></view>
+				</view>
+			</view>
+
+			<button class="ckgd">查看更多</button>
+
+		</swiper-item>
+
+		<swiper-item>
+			<view data-trialId="{{item.trialId}}" bindtap="handleClick" wx:for="{{texts}}" wx:if="{{insd}}" wx:key='index' class="tui">
+				<image src="{{item.missionTypePicture}}" class="tupian" />
+				<view class="wenben">
+				<view class="wenben_1">{{item.userName}}</view>
+					<view class="wenben_2">任务类型：{{item.missionTypeName}}</view>
+					<view class="wenbe_34">
+						<view class="wenben_3">接收时间：{{item.trialT}}</view>
+						<view class="wenben_4">完成时间：{{item.trialCt}}</view>
+					</view>
+
+					<view class="xhx"></view>
+				</view>
+			</view>
+
+			<button class="ckgd">查看更多</button>
+
+		</swiper-item>
+
+		<swiper-item>
+			<view data-trialId="{{item.trialId}}" bindtap="handleClick" wx:for="{{texts}}" wx:if="{{insd}}" wx:key='index' class="tui">
+				<image src="{{item.missionTypePicture}}" class="tupian" />
+				<view class="wenben">
+				<view class="wenben_1">{{item.userName}}</view>
+					<view class="wenben_2">任务类型：{{item.missionTypeName}}</view>
+					<view class="wenbe_34">
+						<view class="wenben_3">接收时间：{{item.trialT}}</view>
+						<view class="wenben_4">完成时间：{{item.trialCt}}</view>
+					</view>
+
+					<view class="xhx"></view>
+				</view>
+			</view>
+
+			<button class="ckgd">查看更多</button>
+
+		</swiper-item>
+
+		<swiper-item>
+			<view data-trialId="{{item.trialId}}" bindtap="handleClick" wx:for="{{texts}}" wx:if="{{insd}}" wx:key='index' class="tui">
+				<image src="{{item.missionTypePicture}}" class="tupian" />
+				<view class="wenben">
+					<view class="wenben_1">{{item.userName}}</view>
+					<view class="wenben_2">任务类型：{{item.missionTypeName}}</view>
+					<view class="wenbe_34">
+						<view class="wenben_3">接收时间：{{item.trialT}}</view>
+						<view class="wenben_4">完成时间：{{item.trialCt}}</view>
+					</view>
+
+					<view class="xhx"></view>
+				</view>
+			</view>
+
+			<button class="ckgd">查看更多</button>
+
+		</swiper-item>
+
+
+	</block>
+
+</swiper>

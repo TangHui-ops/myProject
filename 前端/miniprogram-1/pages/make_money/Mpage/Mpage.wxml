@@ -1,0 +1,110 @@
+<view class="area">
+ <form bindsubmit="add">
+   <view class="a"></view>
+     <view><text class="the" space="ensp">选择类别 <text class="the1">(单选)</text></text></view>
+     <view class="all  {{state==index?'active-tag':''}}" bindtap="select_use" wx:for="{{useList}}" wx:key='index' data-key="{{index}}" >
+   <view class="box">  
+    <rich-text class='use_name' data-missiontype="{{item.missionTypeId}}">{{item.missionTypeName}}</rich-text>  
+   </view>
+   </view>
+   <view>
+     <view class="horizontal"></view>
+   </view>
+   <view class="sb">
+     支持设备
+     <view class="all {{stata==index?'active-tag':''}}" bindtap="select_sb" wx:for="{{sbs}}" wx:key='index' data-key="{{index}}">
+   <view class="box">  
+    <rich-text class='use_name' data-missionsys="{{item.sysId}}">{{item.sysName}}</rich-text>
+   </view>
+   </view>
+  </view>
+   <view class="qit">
+     <view class="horizontal">
+       <view class="zit"><text>标 题</text><input name="missionHeadline" style="margin-left:80px" class="shuk" maxlength="12" placeholder="项目名称+核心要求12字" /></view>
+       <view class="a"></view>
+       <view class="zit" bindtap="clickMe"><text style="float:left" space="nbsp">截止日期      </text>
+       <view class="container">
+  <view class="page-body">
+    <input name="missionCt" class="selected-date" value="{{year}}-{{month}}-{{day}}"></input>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" hidden="{{hiddenName}}">
+      <picker-view-column>
+        <view wx:for="{{years}}" wx:key="years" style="line-height: 50px; text-align: center;">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="months" style="line-height: 50px; text-align: center;">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" wx:key="days" style="line-height: 50px; text-align: center;">{{item}}日</view>
+      </picker-view-column>
+
+    </picker-view>
+  </view>
+</view>
+       </view>
+       <view class="a"></view>
+       <view class="zit"><text>出价</text><input style="margin-left:59rpx" class="shuk" placeholder="最低出价0.5元" name="missionMoney" type="digit" bindinput="flush"/>  元</view>
+       <view class="a"></view>
+       <view class="zit"><text>数量</text><input style="margin-left:59rpx" class="shuk" placeholder="最少50单" name="missionNum" type="digit" bindinput="flushe"/>     单</view>
+       <view class="a"></view>
+       <view class="zit"><text>合计</text><text class="hj" name="missionAll" space="nbsp">          服务费，成交额12%，最低1元                          {{ds}}元</text></view>
+      <view class="a"></view>
+      <view class="zit"><text>备注</text><input style="margin-left:59rpx" class="shuk" maxlength="12"  name="missionText"/></view>
+      <view class="a"></view>
+
+<view class="weui-uploader__title" bindtap="clickMes">审核图样<text class="hj" name="tt" space="nbsp" >   点击上传</text></view>
+<view class="page__bd" hidden="{{hiddenNames}}">
+<view class="weui-cell">
+ <view class="weui-cell__bd">
+   <view class="weui-uploader__bd">
+   <block wx:for="{{files}}" wx:key="*this">
+      <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+      </view>
+    </block>
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+   </view>
+</view>
+</view>
+</view> 
+<view class="a"></view>
+
+<view class="weui-uploader__title" bindtap="clickMem">操作说明<text class="hj" name="tt" space="nbsp" >   简单易懂的操作指南将大幅度提高接单效率</text></view>
+<view class="page__bd" hidden="{{hiddenNamem}}">
+<view class="weui-cell">
+ <view class="weui-cell__bd">
+   <view class="weui-uploader__bd">
+   <block wx:for="{{filesw}}" wx:key="*this">
+      <view class="weui-uploader__file" bindtap="previewImageq" id="{{item}}">
+        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+      </view>
+    </block> 
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImagew"></view>
+    </view>
+                <input>zz</input>
+   </view>
+</view>
+</view>
+</view>
+<view class="a"></view>
+<view class="zit"><text>链接</text><input name="missionLink" style="margin-left:15px" class="shuk" placeholder="请输入准确链接地址，如无链接可不填"  type="digit" bindinput="flushe"/></view>
+
+<view class="a"></view>
+<view class="zit">文字验证</view>
+<view class="a"></view>
+
+        <view class="weui-cells weui-cells_after-title">
+                <view class="ee">
+                    <textarea name="missionVerify" class="weui-textarea" placeholder="如需接单者提供文字信息，请在此输入内容，如不需要可不填" style="height: 3.3em" />
+                </view>
+            </view>
+
+
+       <button class="save" size="default" form-type="submit" type='default'>保存</button>
+       <button class="issue" size="default" form-type='submit' type='default'>发布</button>
+     </view>
+   </view>
+   </form>
+</view>

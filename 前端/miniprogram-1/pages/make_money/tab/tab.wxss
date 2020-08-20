@@ -1,0 +1,87 @@
+/* tab/tab.wxss */
+.big_zuijin {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wz {
+  margin-left: 65px;
+  margin-top: -70px;
+}
+.outer{
+  width: 50%;
+}
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 15px;
+}
+
+.swiper-tab-item {
+  display: inline-block;
+  width: 20%;
+  color: black;
+}
+
+.active {
+  color: dodgerblue;
+  border-bottom: 3rpx solid hsl(207, 87%, 48%);
+}
+
+
+
+
+.titles {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+}
+
+.cons .cons_message {
+  display: block;
+}
+
+.cons .cons_annou {
+  display: none;
+}
+
+.tp {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.hh {
+  margin-left: 210px;
+  margin-top: -173rpx;
+  margin-bottom: 40rpx;
+}
+
+.ft {
+  font-size: 20px;
+}
+
+.mz {
+  font-size: 15px;
+  color: darkgrey;
+}
+
+.bh {
+  font-size: 10px;
+  color: darkgrey;
+}
+
+.dj {
+  font-size: 10px;
+  color: darkgrey;
+}

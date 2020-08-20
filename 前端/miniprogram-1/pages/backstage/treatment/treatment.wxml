@@ -1,0 +1,24 @@
+<!--pages/recent_treatment/recent_treatment.wxml-->
+<view class="swiper-tab">
+	<!-- <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">申述</view>
+	<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">申请</view>
+	<view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">举报</view> -->
+  	<view class="swiper-tab-item {{currentTab==type[index].afterTypeId?'active':''}}" data-current="{{type[index].afterTypeId}}" bindtap="clickTab" wx:for='{{type}}'wx:key="index">
+	 {{type[index].afterTypeName}}</view>
+
+</view>
+
+<swiper current="currentTab" duration="300" bindchange="swiperTab" class="swiper">
+	<swiper-item>
+	<view wx:for='{{result}}' wx:key="index" bindtap="tabclick" data-index='{{index}}'>
+	 
+			<record item="{{result[index].afterReason}}"/>
+ 
+	</view></swiper-item>
+	<!-- <swiper-item><view bindtap="tabclick"><navigator wx:for='{{result}}' wx:key="index" url="/pages/complain/complain?id={{item.id}}">
+			<record item="{{result}}"/>
+	</navigator></view></swiper-item>
+	<swiper-item><view bindtap="tabclick"><navigator wx:for='{{result}}' wx:key="index" url="/pages/complain/complain?id={{item.id}}">
+			<record item="{{result[index].afterReason}}"/>
+	</navigator></view></swiper-item>-->
+</swiper>

@@ -1,0 +1,88 @@
+/* pages/tab/tab.wxss */
+.tab-control{
+  margin-top: 3rpx;
+}
+.titles{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #3A59E8;
+}
+.item{
+  flex: 1;
+  text-align: center;
+}
+text{
+  font-weight: bolder;
+}
+.active text{
+  padding: 20rpx;
+  border-bottom: 6rpx solid white;
+}
+
+.cons{
+  margin: 30rpx;
+}
+.cons .cons_message{
+  display: block;
+}
+.cons .cons_annou{
+  display: none;
+}
+
+.outer{
+  margin-top: 50rpx;
+}
+.box_nowTime{
+  text-align: center;
+  color:gray;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+.box{
+  border: white 1rpx solid;
+  width: 100%;
+  height: 280rpx;
+  margin-top: 30rpx;
+  background-color: #F8F9FB;
+}
+.box_title{
+  font-size: 38rpx;
+  font-weight: bolder;
+  margin: 20rpx;
+}
+.box_content{
+  font-size: 32rpx;
+  margin: 20rpx;
+  font-weight: bold;
+  font-family: '正楷';
+  color: gray;
+  padding-top: 10rpx;
+  /* 超出一行文字自动隐藏 */
+  overflow:hidden; 
+  /* 文字隐藏后添加省略号 */
+  text-overflow:ellipsis;
+  /* 强制不换行 */
+  white-space:nowrap;  
+}
+.detail{
+  width: 190rpx;
+  font-weight: bolder;
+  font-size: 36rpx;
+  float: right;
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail::after{
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 3rpx solid black;
+  border-right: 3rpx solid black;
+  transform: rotate(45deg);
+  display: block;
+  margin-right: 30rpx;
+  margin-top: 7rpx;
+}

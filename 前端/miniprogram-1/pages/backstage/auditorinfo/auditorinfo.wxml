@@ -1,0 +1,57 @@
+<!--pages/auditorinfo/auditorinfo.wxml-->
+<view class="auditor_Info">
+  <view class="user"> 
+    <view class="userinfo">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userName" >
+        <view>ID:{{userInfo.userId}}</view>
+        
+        <view>用户名：{{userInfo.userName}}</view>
+      </view>
+    </view>
+    <view class="taskTypes">
+    </view>
+    <view class="box1">操作原因</view>
+    <scroll-view scroll-y="true">
+      
+
+      <view class="task_list">
+<view class="content_wrap">
+          <view class="content" >
+              <textarea name="opinion"   value="{{content}}" auto-height placeholder-class="placeholder" placeholder="请输入操作原因!" bindinput="handleInput"/>
+          </view>
+      </view>  
+
+      <radio-group class="radio-group" name="radio" bindchange="handleInput2">
+        <!-- <view class="d">
+                <text class="top">封号:</text>
+                 <label><radio color="#038387" value="3" /></label>
+        </view>
+        <view class="d">
+                <text class="top">冻结:</text>
+                <label><radio color="#038387" value="2"/></label>
+        </view>
+        <view class="d">
+                <text class="top">正常:</text>
+                  <label><radio color="#038387" value="1" checked/></label>
+        </view> -->
+        <label class="top" wx:for="{{items}}">        <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}    </label>
+      </radio-group>
+
+        <view class="audit_image">
+          <image wx:for="{{pictures}}" wx:key="{{index}}" mode="aspectFit" src="{{item}}" 
+             data-index="{{index}}" bindtap="handleImage"/>
+        </view>
+      </view>
+
+        <view class="m">结束时间：<input class="n" name="text2" bindinput="handleInput4"></input>
+      </view>
+    </scroll-view>
+    <view class="butt">
+      <button size="mini" type="primary"  bindtap="handleEditInfo">确定</button>
+      <button size="mini" type="primary">取消</button>
+    </view>
+  </view>
+</view>

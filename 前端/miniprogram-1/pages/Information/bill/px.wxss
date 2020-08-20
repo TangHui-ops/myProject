@@ -1,0 +1,37 @@
+/* pages/px/px.wxss */
+.box{
+  background: red;
+  height: 100px;
+}
+
+.box1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.box2{
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.t{
+  display: flex;
+  flex-direction:  row-reverse;
+  justify-content: flex-start;
+}
+
+.b{
+  background: rgb(236, 219, 219);
+  border:solid 1px rgb(54, 54, 13) ;
+} 
+
+.z{
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+}

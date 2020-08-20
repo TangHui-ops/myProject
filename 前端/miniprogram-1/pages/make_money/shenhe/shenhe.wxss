@@ -1,0 +1,145 @@
+/* pages/shenhe/shenhe.wxss */
+.swiper-tab{
+  width: 100%;
+  border-bottom: 4rpx solid black;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-weight: bold;
+}
+.swiper-tab-item{
+  display: inline-block;
+  width: 20%;
+  color: black;
+}
+.active{
+  border-bottom: 4rpx solid red;
+} 
+.mn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:blue;
+  height: 100rpx;
+  width: 100%;
+}
+
+
+
+
+
+
+.cc{
+  height: 50px;
+  border: 1px solid gray;
+}
+
+.an{
+  display: flex;
+    width: 100%;
+    height:50px ;
+    border: 2rpx solid #999;
+    text-align: center;
+    border-radius: 10rpx;
+    color: #000;
+    padding-bottom: 20;
+}
+.text{
+  font-size: 20rpx;
+  letter-spacing: 5rpx;
+}
+
+
+.qw:hover{
+  background-color: blue;
+  color: white;
+}
+.tupian{
+  width: 57px;
+  height: 59px;
+  margin-left: 15rpx;
+  margin-top: 30rpx;
+  vertical-align:middle;
+}
+.tui{
+  display: flex;
+  border-bottom: 5rpx solid #F7F7F7;
+  padding-bottom: 10rpx;
+}
+.wenben{
+  flex: 1;
+}
+.wenben_1{
+  font-size: 40rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.wenben_3{
+  color: #8D8D8D;
+  size:5rpx;
+  display: inline-block;
+  margin-left: 25rpx;
+}
+
+
+.wenben_4{
+  color: #8D8D8D;
+  size:5rpx;
+  display: inline-block;
+  padding-left: 25rpx;
+
+}
+
+.wenben_2{
+  color: #8F8F8F;
+  size: 5rpx;
+  display: inline-block;
+  margin:30rpx 20rpx 20rpx 0rpx;
+  margin-left: 20rpx;
+}
+
+
+
+.qw{
+  letter-spacing: 5rpx;
+  margin: 0rpx;
+  padding: 0rpx;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.n{
+  display: flex;
+  border: blue 2rpx solid;
+  text-align: center;
+  align-items: center;
+  width: 15%;
+  height: 60rpx;
+  margin: 15rpx ;
+   padding: 0rpx;
+   border-radius: 10rpx;
+
+}
+.ckgd{
+  width: 300rpx;
+  height: 100rpxs;
+  margin-top: 30rpx;
+}
+
+.A{
+  width: 100%;
+  white-space: nowrap;
+  border-bottom: solid;
+}
+
+.v{
+  font-size: 20px;
+  width: rpx;
+  display: inline-block;
+  margin:10rpx 20rpx;
+}
+
+

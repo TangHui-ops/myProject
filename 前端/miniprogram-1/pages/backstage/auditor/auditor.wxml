@@ -1,0 +1,46 @@
+<!--pages/auditor/auditor.wxml-->
+
+<view class='page_row' >
+<view class="search">
+    <icon class="searchcion" size='20' type='search'></icon>
+    <input class="textValue" placeholder="请输入用户ID进行操作" bindinput="handleInput"/>
+  </view>
+  <view class='sousuo' bindtap="handleEditInfo">开始</view>
+  </view>
+ 
+
+<view class='page_row' >
+  <view class="search">
+    <icon class="searchcion" size='20' type='search'></icon>
+    <input class="textValue" placeholder="请输入关键字" bindinput="handleInput1"/>
+  </view>
+  <view class='sousuo' bindtap="b">搜索</view>
+</view>
+
+
+<view class="tab_auditor">
+  <block wx:for="{{type}}" wx:key="{{index}}" wx:for-item="item">
+    <view class="task_list">
+      <view class="id" hidden>{{item.userStateId}}</view>
+      <view class="userinfo-avatar">
+          <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="task_type">
+        用户ID：{{item.userId}}
+        <text class='taskID'>状态记录ID：{{item.userStateId}}</text>
+        
+          <view wx:if="{{item.userS ==1}}" class="state"> 账号状态:正常
+            <text class='finish_time' style="margin-left:20rpx">操作时间:{{item.userStateDate}}</text>
+          </view>
+          <view wx:elif="{{item.userS ==2}}" class="state"> 账号状态:冻结
+            <text class='finish_time' style="margin-left:20rpx">操作时间:{{item.userStateDate}}</text>
+          </view>
+          <view wx:else class="state"> 账号状态:封号
+            <text class='finish_time' style="margin-left:20rpx">操作时间:{{item.userStateDate}}</text>
+          </view>
+       
+      </view>
+      <button size="mini" bindtap="c" data-index='{{index}}'>详细</button>
+    </view>
+  </block>
+</view> 

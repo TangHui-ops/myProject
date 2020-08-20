@@ -1,0 +1,16 @@
+<!--components/tabcontrol/tabcontrol.wxml-->
+	<view>
+		<view class="swiper-tab">
+			<view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">进行中</view>
+			<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">已下架（48小时）</view>
+		</view>
+
+		<swiper current="{{currentTab}}" duration="300" bindchange="swiperTab">
+			<swiper-item>
+				<view>第一屏</view>
+			</swiper-item>
+			<swiper-item>
+				<view>第二屏</view>
+			</swiper-item>
+		</swiper>
+	</view>

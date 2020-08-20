@@ -1,0 +1,64 @@
+<!--pages/home/home.wxml-->
+
+
+
+
+
+    <!-- 头部文字 -->
+    <!-- <view  class="header">
+      <text style='margin-left: 10px;'>首页</text>
+      <navigator url="/pages/Mpage/Mpage" class='all'> +</navigator>
+    </view> -->
+
+    <image src='../../../image/yzw.png'  class="aa"/>
+   
+
+
+<view  class="A" >
+<view class="flex-row" style="display:flex;">
+  <view class="a">
+    <view bindtap="jiedan">
+    <image src="../../../image/4.png" class="jd"/>
+
+  <view class="w">
+
+  <navigator class="zq">接单赚钱</navigator>
+      <text class="gz">8000+工作</text>
+     </view>
+    </view>
+   </view>
+
+   <view class="b">
+    <view bindtap="fabu">
+    <image src="../../../image/1.png" class="fb"/>
+  <view class="e">
+  <navigator   class="ru">发布任务</navigator>
+      <text class="lb">自己当老板</text>
+     </view>
+    </view>
+   </view>
+</view>
+
+<view class="flex-row" style="display:flex;">
+  <view class="c">
+    <view bindtap="shenhe">
+    <image src="../../../image/3.png" class="sh"/>
+  <view class="r">
+  <navigator class="rr">审核任务</navigator>
+      <text class="zs">暂没有任务要审核</text>
+     </view>
+    </view>
+   </view>
+
+   <view class="d">
+    <view bindtap="wode">
+    <image src="../../../image/2.png" class="wd"/>
+  <view class="o">
+  <navigator  class="uu">我的任务</navigator>
+      <text class="jx">我接下的任务</text>
+     </view>
+    </view>
+   </view>
+</view>
+</view>
+ 

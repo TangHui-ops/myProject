@@ -1,0 +1,36 @@
+<!--pages/personage/personage.wxml-->
+<view class="tab-body">
+ <image class="picture" src="/image/mall.png"/>
+	<view class="context">
+		<view class="tab-context" bindtap='click_recent'>
+			<image src="/image/1.png"  class="image1"/>
+			<view class="tab-item">
+				<view>近期处理</view>
+				<text>近期的申诉、申请和投诉</text>
+			</view>
+		</view>
+		<view class="tab-context" bindtap='click_feedback'>
+			<image src="/image/2.png"  class="image2" />
+			<view class="tab-item">
+				<view>反馈</view>
+				<text>用户所提供的反馈意见</text>
+			</view>
+		</view>
+	</view>
+	<view class="context">
+		<view class="tab-context"  bindtap='click_news'>
+			<image src="/image/3.png"  class="image3" />
+			<view class="tab-item">
+				<view>消息推送</view>
+				<text>要发送的消息以及公告</text>
+			</view>
+		</view>
+		<view class="tab-context" bindtap='click_audit'>
+			<image src="/image/4.png"  class="image4" />
+			<view class="tab-item">
+				<view>审核</view>
+				<text>对用户提交的单子进行审核</text>
+			</view>
+		</view>
+	</view>
+</view>

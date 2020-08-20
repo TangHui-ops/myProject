@@ -1,0 +1,72 @@
+view{
+  width: 100%;
+}
+text{
+  margin-left: 25rpx;
+  margin-top: -5rpx;
+}
+.two{
+  font-size: 40rpx;
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #efefef;
+  justify-content: space-between;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+
+
+}
+.a{
+  text-align: right;
+}
+.b{
+  margin-bottom: 30rpx;
+  color: red;
+
+}
+.c{
+  text-align: center;
+}
+.money{
+  margin-top: 3rpx;
+  background-color: white;
+  height: 110rpx;
+  display: flex;
+}
+.three{
+  font-size: 40rpx;
+margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  width: 100%;
+  height: 88rpx;
+  align-items: center;
+  border-top: 1px solid #efefef;
+
+  justify-content: space-between;
+}
+input{
+  text-align: right;
+  padding-top: 30rpx;
+}
+radio{
+  text-align: center;
+}
+.four{
+  background-color: rgb(242, 242, 247);
+}
+button{
+  width: 90%;
+   color: white;
+ background-color: cornflowerblue;
+}
+.five{
+  background-color: rgb(242, 242, 247);
+}
+.six{
+  width: 900rpx;
+  height: 900rpx;
+  color: rgb(92, 91, 90);
+  background-color: rgb(242, 242, 247);
+}

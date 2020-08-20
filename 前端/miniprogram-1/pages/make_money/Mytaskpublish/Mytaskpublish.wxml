@@ -1,0 +1,65 @@
+<!--task/task.js.wxml-->
+<!-- <view class="renwu">任务详情</view> -->
+<view class="weui-form-preview__bd" wx:for="{{missionList}}">
+	<view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.title}}</label>
+		<text class="weui-form-preview__value">{{item.missionHeadline}}</text>
+	</view>
+	<view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.publisher}}</label>
+		<view style="float:left" >
+			<image src="{{item.userHead}}" class="picture"></image>
+		</view>
+		<text class="weui-form-prevew__value" style="float:left;padding-left:10rpx;" >{{item.userName}}</text>
+    <view >
+      <button size="mini" class="button" >+关注</button>
+      <button size="mini" class="button" >店铺</button>
+    </view>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.number}}</label>
+		<text class="weui-form-preview__value">{{item.missionNo}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.category}}</label>
+		<text class="weui-form-preview__value">{{item.missionTypeName}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.unitprice}}</label>
+		<text class="weui-form-preview__value">{{item.missionMoney}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.verification}}</label>
+		<text class="weui-form-preview__value">{{item.missionVerify}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.remark}}</label>
+		<text class="weui-form-preview__value">{{item.missionText}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.zhidingdaoqi}}</label>
+		<text class="weui-form-preview__value">{{item.missionSt}}</text>
+	</view>
+  <view class="weui-form-preview__item">
+		<label class="weui-form-preview__label">{{task1.deadline}}</label>
+		<text class="weui-form-preview__value">{{item.missionCt}}</text>
+	</view>
+</view>
+<view class="backgroundcolor1">
+	<view class="yanzheng">验证图(共{{img.length}}张)</view>
+	<block wx:for="{{img}}" wx:key="item"> 
+		<image src="{{item}}" class="wenbenkuang" data-index="{{index}}" bindtap="handleImage"></image>
+	</block>
+</view>
+
+<view class="backgroundcolor3">
+	<view class="jubao1">完成任务后，请回到平台【我的任务】上传任务截图</view>
+	<view class="jubao2">平台禁止发布一切法律所禁止的内容，如果发现请</view>
+	<view bindtap="ju" class="jubao"  >举报</view>
+  <view bindtap="fhsy" class="fhsy">
+	  <image src="/pages/picture/fhsy.png"/>
+  </view>
+</view>  
+
+			
+

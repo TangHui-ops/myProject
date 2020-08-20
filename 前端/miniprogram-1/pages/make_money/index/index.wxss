@@ -1,0 +1,129 @@
+/**index.wxss**/
+.titles{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.item{
+  flex: 1;
+  text-align: center;
+}
+text{
+ font-size: 40rpx;
+}
+.active text{
+  padding: 20rpx;
+  border-bottom: 6rpx solid blue;
+}
+
+.cons .cons_annou{
+  display: none;
+}
+
+.wenben{
+  flex: 1;
+}
+.wenben_1{
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.wenben_2{
+  color: #8F8F8F;
+  display: inline-block;
+  margin:30rpx 20rpx 20rpx 0rpx;
+  margin-left: 20rpx;
+}
+.wenben_3{
+  color: #8D8D8D;
+  display: inline-block;
+  margin-left: 25rpx;
+}
+.tupian{
+  width: 54px;
+  height: 58px;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  vertical-align:middle;
+}
+.tui{
+  display: flex;
+}
+/* transparent */
+.shanchu{
+  background-color: transparent;
+  margin-top: 50rpx;
+  border: 1px solid #8F8F8F;
+  height: 100%;
+}
+.zzz{
+  margin-top: 8rpx;
+  border-bottom: 1px solid #8F8F8F;
+}
+.zhk{
+  width: 100%;
+  text-align: center;
+}
+.huakuai{
+  border: 2rpx solid #5EB0FA;
+  background-color: transparent;
+  color: #5EB0FA;
+  margin-top: 10rpx;
+  width: 13%;
+  font-size: 32rpx;
+  margin-left: 40rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+}
+.huakuai:hover{
+  background-color: #5EB0FA;
+  color: white;
+}
+.advertising{
+  margin-top: 10rpx;
+  width: 100%;
+  height: 80rpx;
+  background-color: #40B6FE;
+  display: inline-block;
+  padding-top: 40rpx;
+  display: flex;
+}
+.advertising_2{
+  color: white;
+  text-align: center;
+  font-size: 32rpx;
+}
+.zddp{
+  display: inline-block;
+}
+
+.jdzq{
+  position: fixed;
+  right: 20rpx;
+  top: 760rpx;
+}
+.jdzq image{
+  height: 95rpx;
+  width: 95rpx;
+}
+
+.dktz{
+  position: fixed;
+  right: 20rpx;
+  top:900rpx
+}
+.dktz image{
+  height: 95rpx;
+  width: 95rpx;
+}
+.fhsy{
+  position: fixed;
+  right: 20rpx;
+  top:1040rpx;
+}
+.fhsy image{
+  height: 95rpx;
+  width: 95rpx;
+}
+

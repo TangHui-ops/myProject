@@ -1,0 +1,29 @@
+.one{
+  border-top: 1px solid;
+  width: 100%;
+  height: 100%;
+ }
+ .two{
+       width: 100%;
+       height: 20%;
+       background-color: #F8F8F8;
+ }
+ .three{
+   width: 100%;
+   height: 20%; 
+   background-color:#F8F8F8;
+ }
+ .frou{
+     color: red;
+ }
+ .anniu{
+   margin-top: 3%;
+   width: 450rpx;
+    background-color: rgb(81, 81, 252);
+    color:white;
+ }
+ .weui-uploader__input-box{
+    margin-top: 90rpx;
+ }
+
+ 

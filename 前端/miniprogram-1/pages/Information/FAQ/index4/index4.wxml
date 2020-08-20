@@ -1,0 +1,14 @@
+<!--pages/index4/index4.wxml-->
+<view class="t">
+  <text style="font-size:20px;">为什么提现申请成功后，金额又返回到账户中？</text>
+</view>
+
+  <view class="t3"></view>
+  <view class="t1">2020-5-4 
+  <text class="t2">云转圈</text>
+  </view>
+
+  <text>
+     请先查看您绑定的支付宝账号和姓名是否匹配，如填写错误，金额无法正常到账，金额将返回到个人账户中,请修改后再重新提交提现申请。 
+  </text>
+

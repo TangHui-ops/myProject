@@ -1,0 +1,19 @@
+<!--pages/setting_details/setting_details.wxml-->
+<view class="big_outer" wx:for="{{DetailsList}}" wx:key="index">
+  <view class="title">
+    <text>{{item.title}}</text>
+  </view>
+  <view class="time">
+    <text>{{item.nowTime}}</text>
+  </view>
+
+  <view class="image" wx:if="{{item.image==''?false:true}}">
+    <image src="{{item.image}}"></image>
+  </view>
+
+  <view class="content">
+    <text>
+      {{item.content}}
+    </text>
+  </view>
+</view>

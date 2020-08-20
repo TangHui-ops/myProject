@@ -1,0 +1,62 @@
+/* Stick/Stick.wxss */
+.boss{
+  background-color:  #EEEEEE;
+}
+
+.title{
+  border-bottom: 1px solid #dadada;
+  width: 100%;
+  height: 100rpx;
+  font-size: 100%;
+}
+.title text{
+  line-height:100rpx;
+  
+}
+
+.jiage{
+  border: 1px solid black;
+  background-color: white;
+  width: 100%;
+  height: 50%;
+  font-size: 100%;
+}
+
+.table{
+  /* border:1px solid #dadada; */
+  background-color:white ;
+}
+
+.th{
+  padding: 5px;
+  border-bottom: 1px solid #dadada;
+  text-align: left;
+  width: 100%;
+  font-weight: 800;
+  font-size: 25rpx;
+  color:black;
+}
+
+.hejijine{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #dadada;
+  line-height:100rpx;
+  font-size: 100%;
+}
+
+.weizhi{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #dadada;
+  line-height:100rpx;
+  font-size: 100%;
+}
+.zhuyi text{
+  font-size: 100%;
+  color: red;
+}
+
+.querenaniu{
+  padding-top: 30px;
+}

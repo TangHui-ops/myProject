@@ -1,0 +1,106 @@
+/* IShop/IShop.wxss */
+
+.boss{
+  width: 100%;
+}
+
+/* 头部 */
+.toubu{
+  width: 100%;
+  height: 100px;
+  background-color: #F76164;
+}
+
+.touxiang{
+  float: left;
+  height: 100px;
+  padding-right: 5%;
+}
+
+.touxiang image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow:hidden;
+  border:3px solid white;
+  position:relative;
+  top: 10%;
+  left: 10%;
+}
+
+.zhiliao{
+  height: 100px;
+  font-size:100%;
+  width: 750rpx;
+  
+}
+
+.mc,.id{
+  padding-left: 10px;
+  height: 33%;
+  
+}
+
+.aniu{
+  height: 30%;
+  padding-left: 35%;
+}
+
+.gz,.dp{
+  color: white;
+  background-color:#F76164 ;
+  border:1px solid white;
+  margin-left: 10%;
+}
+
+
+/* 身体 */
+.shenti{
+  width: 100%;
+  height: 250rpx;
+  padding-top: 1px;
+}
+/* 表格代码   */
+.table{
+  /* border:1px solid #dadada; */
+  background-color: #F76164 ;
+}
+.tr{
+  width:100%;
+  display: flex;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  text-align: left;
+  width: 100%;
+}
+.th{
+  font-weight: 800;
+  font-size: 25rpx;
+  color: #330e0e;
+}
+
+.tr text{
+  color: white;
+}
+
+
+.swiper-tab{
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-weight: bold;
+}
+.swiper-tab-item{
+  display: inline-block;
+  width: 33.33%;
+  color:red;
+  font-size:28rpx;
+}
+.active{
+  color:aqua;
+  border-bottom: 4rpx solid red;
+}

@@ -1,0 +1,66 @@
+/* pages/personage/personage.wxss */
+.tab-body{
+  margin-top: 2rpx;
+  background-color: #F0F0F0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.picture{
+  height:280rpx;
+  width: 750rpx;
+}
+
+.context{
+  display: flex;
+  margin-left: 20rpx;
+}
+
+.tab-context{
+  width: 320rpx;
+  height: 350rpx;
+  margin:20rpx ;
+  border-radius: 10%;
+  box-shadow:0rpx 2rpx 1rpx 1rpx darkgrey;
+}
+
+.image1{
+  width: 150rpx ;
+  height: 130rpx ;
+  margin: 10prx;
+  padding: 10rpx;
+}
+
+.image2{
+  width: 180rpx ;
+  height: 150rpx ;
+  margin: 0prx;
+  padding: 0rpx;
+}
+
+.image3{
+  width: 170rpx ;
+  height: 150rpx ;
+  margin: 0prx;
+  padding: 0rpx;
+}
+
+.image4{
+  width: 150rpx ;
+  height: 150rpx ;
+  margin: 0prx;
+  padding: 0rpx;
+}
+
+.tab-item{
+  font-size: 35rpx;
+  margin: 20rpx ;
+  height: 140rpx;
+  background-color: #fff;
+  border-radius: 10%;
+}
+
+text{
+  font-size: 24rpx;
+  color: darkgray;
+}

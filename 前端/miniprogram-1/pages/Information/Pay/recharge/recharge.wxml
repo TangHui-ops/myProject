@@ -1,0 +1,41 @@
+<view class="box">
+<form bindsubmit='searchBox'>
+  <view class="money">
+   <text>充值余额：</text>
+    <input name="qie"   placeholder="请输入提现金额 (元)" class="input">
+        
+      </input>
+  </view>
+  
+
+ <view class="three">
+   <text>充值方式：</text>
+   <radio checked="checked">微信</radio>
+ </view>
+ <view class='four'>
+   <text class="b">
+ 提示:
+  微信过程中，如遇"本次交易存在风险"，
+  选择[继续付款]即可，此提醒仅为微信尽到的风险提示义务，多针对首次支付的用户。</text>
+ </view>
+ <view class="five">
+  <button form-type='submit'>充值</button>
+ </view>
+</form>
+ <view class="six">
+ <text>注：</text>
+ <text class="c">
+ 1.平台暂不支持支付宝充值及提现，今后如开放平台会及时公告。
+ 2.充值无最低额度限制够用即可，
+ 请根据任务单价及数量自行确定充值金额，
+ 如有剩余可以提现，但会收取一定的费用，
+ 详情请参阅任务[发布规则]或
+ [用户协议]。</text>
+ </view>
+</view>
+
+
+
+
+
+

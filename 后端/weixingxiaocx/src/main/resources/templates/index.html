@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>秃头</title>
+</head>
+<body>
+
+    绑定支付宝(获取验证码)
+    <form action="/weixingxiaocx/bindalipay" method="post">
+        用户id：<input type="text" maxlength="10" placeholder="用户唯一id" name="userid"  /><br />
+        支付宝：<input name="telphone" type="text" maxlength="11" placeholder="手机号码" /><br />
+        验证码：<input type="text" maxlength="6" name="yzm" placeholder="6位数验证码" /><br />
+        <a th:href="'javascript:send()'" >获取验证码</a>
+        <button type="submit" > 确定绑定 </button>
+        <a th:text="${errorInfo}"><a>
+    </form>
+
+</body>
+<script th:src="@{/jquery-3.5.1.js}"></script>
+<script>
+
+    function send() {
+        //获取手机号
+        var telphone = $("input[name='telphone']").val();
+        //发送Ajax请求
+        $.ajax({
+            url:"/weixingxiaocx/sendsms",
+            type:"POST",
+            data:{"telphone":telphone} ,
+            success:function () {
+                alert("成功发送！手机号为："+telphone);
+            }
+        })
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!--pages/tab/tab.wxml-->
+<view class="tab-control">
+  <view class="titles">
+    <view class="item {{indexCurr == index ? 'active':''}}" 
+          bindtap="hearItemClick"
+          data-index="{{index}}"
+          wx:for="{{navbarTitle}}" wx:key="item">
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+  <view class="cons">
+    <view class="{{0 == indexCurr ? 'cons_message':'cons_annou'}}" >
+      
+      <view class="outer" wx:for="{{MessageList}}" wx:key="index">
+        <view class="box_nowTime">{{item.nowTime}}</view>
+        <view class="box">
+          <view class="box_title">{{item.title}}</view>
+          <view class="box_content">{{item.content}}</view>
+          <view class="detail" 
+                bindtap="skippage" 
+                data-msgid="{{item.id}}">查看详情</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="{{1 == indexCurr ? 'cons_message':'cons_annou'}}" >
+      <view class="outer" wx:for="{{AnnouList}}" wx:key="index">
+          <view class="box_nowTime">{{item.nowTime}}</view>
+          <view class="box">
+            <view class="box_title">{{item.title}}</view>
+            <view class="box_content">{{item.content}}</view>
+            <view class="detail" 
+                  bindtap="skippage" 
+                  data-msgid="{{item.id}}">查看详情</view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/index3/index3.wxml-->
+<navigator url="/pages/FAQ/index4/index4">
+    <view style="text-indent:1em" class="q">为什么提现申请成功后，金额又返回到账户中？<image src="/images/youjiantou.png" style="width:40rpx; height:40rpx"></image></view>
+</navigator>
+

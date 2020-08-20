@@ -1,0 +1,67 @@
+/* pages/index3/index3.wxss */
+.q{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.w{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.e{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.r{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.t{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.y{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.u{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.i{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.o{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.p{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.a{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.s{
+  border-bottom: 1px solid aqua;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+image{
+  margin-top: 20rpx;
+  float: right;
+}
+
+

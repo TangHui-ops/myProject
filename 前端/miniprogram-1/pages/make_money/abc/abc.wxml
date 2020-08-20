@@ -1,0 +1,37 @@
+<view class="srk" bindtap="search">
+	<icon type="search"></icon>
+	<input placeholder="请输入关键字" type="text"></input>
+	<view class="aaa">
+	</view>
+	<view>
+	</view>
+</view>
+<button class="ss" size="mini">搜索</button>
+
+<scroll-view scroll-x="true" class="types">
+	<block wx:for="{{navbarTitle}}" wx:key="item" data-typeid="{{item.missionType}}">
+		<view class="type-item {{index === defaultTypeIndex ? 'active':'active-none'}}" bindtap="hearItemClick" data-index="{{index}}">{{item.missionTypeName}}</view>
+	</block>
+</scroll-view>
+
+
+
+<view class="big_zuijin">
+	<view class="outer" wx:for="{{newMissionList}}" wx:key="index" bindtap="NewDetail" data-detailid="{{item.missionId}}">
+		<view>
+			<image src="{{item.missionTypePicture}}" class="tp"></image>
+		</view>
+		<view class="wz">
+			<view class="pb">
+				<view class="ft">{{item.missionTypeName}}</view>
+				<view class="mz">{{item.missionHeadline}}</view>
+			</view>
+			<view class="pb_content">
+				<view class="bh">编号：{{item.missionNo}}</view>
+				<view class="dj">单价：{{item.missionMoney}}</view>
+			</view>
+		</view>
+
+		<view class="spx"></view>
+	</view>
+</view>

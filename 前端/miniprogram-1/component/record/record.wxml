@@ -1,0 +1,14 @@
+<!--pages/record/record.wxml-->
+<view class="body">
+    <view class="head">
+      <open-data type="userAvatarUrl"  bindgetuserinfo="onGotUserInfo"></open-data>
+      </view>
+      <view class="w-name">
+      <view class="name">
+       <open-data type="userNickName" lang="zh_CN"></open-data>
+      </view>
+    <view class="tab-content" >
+     {{item}}
+    </view>
+    </view>
+</view>
