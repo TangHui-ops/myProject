@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "宋体";
+    background-color: white;
+}
+/* @media all and (min-width: 1000px) { */
+    /*头部*/
+    #header .loginJD{
+        padding-left: 200px;
+    }
+    .loginJD h1{
+        display: inline;
+        position: absolute;
+        top:27px;
+    }
+    #message{
+        float: right;
+        position: absolute;
+        top:45px;
+        right:270px;
+    }
+    #message img{
+        position: relative;
+        top:6px;
+    }
+    #message a{
+        font-size: 12px;
+        color: gray;
+    }
+    #message a:hover{
+        text-decoration: underline;
+        font-size: 12px;
+        color: red;
+        
+    }
+
+    
+    /* 中间 内容 */
+    #context .law p{
+        font-size: 12px;
+        text-align: center;
+        line-height: 35px;
+        height: 35px;
+    }
+/* .law img{
+    background-color: #FFF8F0;
+    position: absolute;
+    top:83px;
+    left:900px;
+} */
+    .image img{
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+    }
+
+.backgroundImage .deng{
+    position: absolute;
+    top:145px;
+    left:200px;
+    width: 390px;
+    height: 430px;
+}
+.backgroundImage .deng .span{
+    display: inline-block;
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    line-height: 38px;
+    width: 100%;
+    height: 38px;
+}
+.deng .saoma{
+    display: inline-block;
+    width: 50%;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 60px;
+    border-bottom: 1px solid #f4f4f4;
+}
+.deng a{
+    color: #999999;
+}
+.deng .saoma a{
+    color: red;
+    font-weight: 700;
+}
+.deng .saoma a:hover{
+    color: red;
+    font-weight: 700;
+}
+.deng .zhanghu a:hover{
+    color: red;
+    font-weight: 700;
+}
+.deng .zhanghu{
+    float: right;
+    width: 50%;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 60px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+
+.code img{
+    width: 147px;
+    height: 147px;
+}
+#formlogin .open_1 ul{
+    text-align: center;
+}
+#formlogin .open_1 ul li{
+    display: inline;
+    font-size: 12px;
+}
+#formlogin .open_1 ul li a{
+    color: red;
+}
+
+#formlogin .open_2 ul{
+    text-align: center;
+}
+#formlogin .open_2 ul li{
+    display: inline;
+    font-size: 12px;
+    padding-left: 30px;
+}
+#formlogin .open_2 ul li img{
+    position: relative;
+    top:10px;
+}
+
+.coagent{
+    width: 100%;
+    height: 50px;
+    background-color: #666666;
+    position: absolute;
+    top:365px;
+    border-top: 1px solid #f4f4f4;
+}
+.coagent ul li{
+    display: inline;
+    line-height: 50px;
+    position: relative;
+    left:20px;
+}
+.coagent li a{
+    font-size: 12px;
+    padding-left:8px;
+}
+.coagent li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.coagent li a span{
+    padding-left:10px;
+}
+.coagent li img{
+    width: 15px;
+    height:15px;
+    position: relative;
+    top:5px;
+}
+.coagent ul .liji{
+    display: inline-block;
+    position: relative;
+    left:160px;
+}
+.coagent ul .liji a{
+    font-size:14px;
+    color:red;
+}
+.coagent ul .liji a:hover{
+    text-decoration: underline;
+}
+.coagent .liji .gt{
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius:50%;
+    background-color: red;
+    position: relative;
+    top:2px;
+    left:13px;
+}
+
+#userName,#password{
+    height: 36px;
+    width: 280px;
+    margin-top: 30px;
+    border:2px solid #F1F1F1;
+}
+#formlogin2 .suredeng,.mima{
+    text-align: center;
+}
+
+#formlogin2 .wangjipwd{
+    float: right;
+    margin-top:15px;
+    margin-right:33px;
+    font-size:12px;
+    color: black;
+}
+#formlogin2 .wangjipwd a:hover{
+    color:red;
+    text-decoration: underline;
+}
+#formlogin2 .register input{
+    width: 325px;
+    height: 45px;
+    font-size:20px;
+    border:none;
+    color: white;
+    font-weight: 700;
+    background-color: red;
+    border:1px gray solid;
+    text-align: center;
+}
+
+/* 底部 */
+.footer{
+    text-align: center;
+    font-size:12px;
+    margin-top:20px;
+}
+.footer .guangyv a{
+    color: #666666;
+    margin:0 6px;
+}
+.footer .guangyv a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.footer .banquan{
+    margin:10px 0;
+    color: #666666;
+}
