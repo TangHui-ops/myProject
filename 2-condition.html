@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+   <div id="box">
+       <button @click="handleClick()">click</button>
+       <div v-if="isCreated">动态创建和删除--111111</div>
+       <div v-else>动态创建和删除-22222</div>
+
+       <ul v-if="datalist.length">
+           <li v-for="data in datalist">
+               {{data}}
+           </li>
+       </ul>
+       <div v-else>
+           购物车空空如也
+       </div>
+
+       <div v-if="whilch===1">
+           111111
+       </div>
+       <div v-else-if="whilch===2">
+           222222
+       </div>
+       <div v-else>
+           333333
+       </div>
+   </div>
+
+
+
+   <script type="text/javascript">
+       var vm = new Vue({
+           el:"#box",
+           data:{
+               isCreated: false,
+               datalist:[],
+               whilch:1
+           },
+           methods:{
+               handleClick(){
+                   this.isCreated = !this.isCreated
+                   this.datalist = ["111","222","333"]
+               }
+           }
+       })
+   </script>
+</body>
+</html>

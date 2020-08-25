@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+   <div id="box">
+       <div style="background: yellow">11111111</div>
+
+       <button @click="handleClick()">click</button>
+       <div :class="isActive?'red':'yellow'">我是动态绑定class-三日写法</div>
+       <div :class="classobj">我是动态绑定class-对象写法</div>
+       <div :class="classarr">我是动态绑定class-数组写法</div>
+
+       <div :style="'background:'+(isActive?'red':'yellow')">我是动态style</div>
+       <div :style="styleobj">我是动态style-对象写法</div>
+       <div :class="stylearr">我是动态style-数组写法</div>
+   </div>
+
+   <script type="text/javascript">
+       var vm = new Vue({
+           el:"#box",
+           data:{
+               isActive:true,
+               classobj:{
+                   a:true,
+                   b:true
+               },
+               classarr:["a","b"],
+               styleobj:{
+                   backgroundColor:'red'
+               },
+               stylearr:[]
+           },
+           methods:{
+               handleClick(){
+                   this.isActive = !this.isActive
+               }
+           }
+       })
+
+
+
+   </script>
+</body>
+</html>

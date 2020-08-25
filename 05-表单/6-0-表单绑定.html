@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表单绑定</title>
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+	<div id="box">
+		<input type="text" v-model="mytext" />
+		{{mytext}}
+		<textarea v-model="mytext"></textarea>
+		<br/>
+		<input type="checkbox" v-model="isChecked" />记录用户名
+		
+		<br/>
+		<p>你喜欢的运动？
+		    <input type="checkbox" v-model="checkgroup" value="游泳" />游泳
+			<input type="checkbox" v-model="checkgroup" value="滑冰" />滑冰
+		    <input type="checkbox" v-model="checkgroup" value="长跑" />长跑
+		</p>
+		{{checkgroup}}
+		
+		<br/>
+		<p>你喜欢的开发语言？
+		    <input type="radio" v-model="picked" value="php" />php
+			<input type="radio" v-model="picked" value="js" />js
+		    <input type="radio" v-model="picked" value="java" />java
+		</p>
+		{{picked}}
+	</div>
+	
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#box",
+			data:{
+				mytext:'',
+				isChecked:true,
+				checkgroup:[],
+				picked:''
+			}
+		})
+	</script>
+</body>
+</html>

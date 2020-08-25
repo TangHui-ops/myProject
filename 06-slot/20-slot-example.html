@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>slot</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="box">
+		<!-- <button @click="isShow=!isShow"></button> -->
+		<navbar @myevent="handleEvent"></navbar>
+		<sidebar v-show="isShow"></sidebar>
+	</div>
+	
+	<script type="text/javascript">
+		Vue.component("navbar",{
+			template:
+			  `<div>
+			      navbar
+				  
+				  <button @click="handleClick">navbar-button</button>
+			  </div>`,
+			  methods:{
+				  handleClick(){
+					  this.$emit("myevent")
+				  }
+			  }
+		})
+		
+		Vue.component("sidebar",{
+			template:
+			  `<div style="background:yellow;width:200px;">
+			      <ul>
+				     <slot></slot>
+				  </ul>
+			  </div>`
+		})
+		
+		var vm = new Vue({
+			el:"#box",
+			data:{
+				datalist:["1111","2222","3333"]
+			}
+		})
+	</script>
+</body>
+</html>

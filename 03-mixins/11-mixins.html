@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mixins</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="box">
+		<button @click="methodA()">click</button>
+		
+		<div v-if="isA">11111111</div>
+		<div v-else>2222222</div>
+	</div>
+	
+	<script type="text/javascript">
+		function mymethod(){
+			console.log("复杂计算")
+		}
+		var myobj = {
+			methods:{
+				methodA:mymethod
+			}
+		}
+	</script>
+</body>
+</html>

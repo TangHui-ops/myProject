@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <style>
+        .active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <div id="box">
+       <ul>
+           <li v-for="(data,index) in datalist" key="index">
+               {{data}}---{{index}}
+           </li>
+       </ul>
+	   
+	   <ul>
+	       <li v-for="(data,index) of datalist">
+	           {{data}}---{{index}}
+	       </li>
+	   </ul>
+	   
+	   <ul>
+	       <li v-for="(data,key) in obj">
+	           {{data}}---{{key}}
+	       </li>
+	   </ul>
+   </div>
+
+
+
+   <script type="text/javascript">
+       var vm = new Vue({
+           el:"#box",
+           data:{
+               datalist:["111","222","333"],
+			   obj:{
+				   name:"Tang",
+				   age:100,
+				   location:"dalian"
+			   }
+           },
+           methods:{
+
+           }
+       })
+   </script>
+</body>
+</html>

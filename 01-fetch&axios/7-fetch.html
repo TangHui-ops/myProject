@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表单绑定</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="box">
+		
+		<button @click="handleClick()">获取影片信息</button>
+		<ul>
+			<li v-for="data in datalist">
+				<h3>{{data.name}}</h3>
+				<img :src="data.poster" />
+			</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+		/* fetch("./json/test.json").then(res=>res.JSON()).then(res=>{
+			console.log(res)
+		}) */
+		var vm = new Vue({
+			el:"#box",
+			data:{
+				datalist:[]
+			},
+			methods:{
+				handleClick(){
+					fetch("./json/test.json").then(res=>res.JSON()).then(res=>{
+						console.log(res.data.films)
+						this.datalist = res.data.films
+					}) 
+				}
+			}
+		})
+	</script>
+</body>
+</html>

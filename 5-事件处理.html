@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<style>
+		.active{
+		    background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<button @click="handleClick">click</button>
+		<button @click="handleClick($event)">click2</button>
+		<button @click="isShow = !isShow">click3</button>
+		<div v-show="isShow">1111111</div>
+		
+		<ul @click.self="handleULClick()">
+			<li @click.stop="handleLiClick($event)">11111</li>
+			<li @click="handleLiClick()">22222</li>
+			<li @click.once="handleLiClick()">33333</li>
+		</ul>
+		
+		<a href="http://www.baidu.com" @click.prevent = "handlechangePage()">changepage</a>
+	
+	    <input type="text" @keyup.enter="handleKeyup($event)" />
+	</div>
+	
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#box",
+			data:{
+				isShow:false,
+			},
+			methods:{
+				handleClick(ev){
+					console.log(ev.target)
+					this.isShow = !this.isShow
+				},
+				handleLiClick(ev){
+					//ev.stopPropagation()
+					console.log("li click")
+				},
+				handleULClick(){
+					console.log("ul click")
+				},
+				handlechangePage(){
+					
+				},
+				handleKeyup(ev){
+					console.log(ev)
+					if(ev.keyCode == 13){
+						console.log("执行keyup")
+					}
+				}
+			}
+		})
+	</script>
+</body>
+</html>
