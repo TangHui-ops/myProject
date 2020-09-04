@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .div{
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:title="titles">hello</div>
+        <img v-bind:src="imgSrc" alt="" title="百度Logo" />
+        <hr/>
+        <!-- 为其中一个绑定red颜色值 -->
+        <!-- 绑定class名称的第一种方式：三元运算符 -->
+        <ul>
+            <li v-for="(item,index) in list" :key="index" v-bind:class="item.name == '张磊' ? 'red':''">
+                {{item.name}}
+            </li>
+        </ul>
+        <!-- 绑定class名称的第二种方式：对象的方式 -->
+        <ul>
+            <li v-for="(item,index) in list" :key="index" v-bind:class="{red:item.name == '张磊',blue:item.name == 'Jack'}">
+                {{item.name}}
+            </li>
+        </ul>
+        <!-- 绑定class名称的第三种方式：数组的方式 -->
+        <ul>
+            <li v-for="(item,index) in list" :key="index" v-bind:class="['red']">
+                {{item.name}}
+            </li>
+        </ul>
+        <hr/>
+        <!-- 绑定style的第二种方式：字符串 -->
+        <div class="div" v-bind:style="`background:url(${imgSrc}) no-repeat center;background-size:cover;`"></div>
+        <!-- 三元运算符
+               用内联样式的方式实现，某一个name，颜色为红色 -->
+        <ul>
+            <li v-for="(item,index) in list" :key="index" v-bind:style="`color:${item.name == '张磊' ? 'red':''}`">
+                {{item.name}}
+            </li>
+        </ul>
+        <!-- 对象
+               用内联样式的方式实现，某一个name，颜色为红色 -->
+               <ul>
+                <li v-for="(item,index) in list" :key="index" v-bind:style="{color:item.name == '张磊' ? 'red':'',
+                         'font-size':item.name == '李四' ? '40px':''}">
+                    {{item.name}}
+                </li>
+            </ul>
+
+        <!-- v-bind简写 -->
+        <!-- : 代表 v-bind -->
+        <select v-model="selectVal">
+            <option :value="item.name" v-for="item in list">{{item.name}}</option>
+        </select>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data() {  // 数据仓库，页面数据存放的区域
+                return {
+                    imgSrc: "https://www.baidu.com/img/dong_8ff048ec89a4c8b4d638def4ce4dafda.gif",
+                    titles:"阿萨德积分好几十",
+                    list:[
+                        {name: '张磊', id:1},
+                        {name: '李四', id:2},
+                        {name: '王五', id:3},
+                        {name: 'Jack', id:4},
+                    ],
+                    
+                }
+            },
+            methods: {
+
+            },
+        })
+    </script>
+</body>
+
+</html>

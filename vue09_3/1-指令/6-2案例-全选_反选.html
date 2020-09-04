@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <input type="checkbox" v-model="iptVal" @change="selectedAll" />全选
+        <ul>
+            <li v-for="item in list">
+                <input type="checkbox" @change="inpChange" v-model="item.isChecked" />{{item.name}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data: function () {  // 数据仓库，页面数据存放的区域
+                return {
+                    iptVal:false,
+                    list:[
+                        {name: '张磊', id:1,isChecked:false},
+                        {name: '李四', id:2,isChecked:true},
+                        {name: 'Jack', id:4,isChecked:false},
+                    ],
+                }
+            },
+            methods: {
+                inpChange(){
+                    // 当列表全部选中之后，全选按钮应该自动选中 intVal = true
+                    var bol = this.list.every(ele => ele.isChecked == true);
+                    console.log(bol);
+                    this.iptVal = bol;
+                },
+                selectedAll(){
+                    // 当点击了全选按钮之后 1.控制列表的全部选中
+                                        // 2.控制列表的全部取消选中
+                    this.list.forEach(ele => ele.isChecked = this.iptVal);
+                    // if(this.iptVal){
+                    //     // 全部选中
+                    //     this.list.forEach(ele => ele.isChecked == true);
+                    // }else{
+                    //     // 取消选中
+                    //     this.list.forEach(ele => ele.isChecked == false);
+                    // }
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

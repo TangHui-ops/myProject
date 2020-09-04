@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+        .on{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <!-- Mustache {{}} 双大括号插值法 -->
+        <!-- 在{{}} 可以执行一些简单的js操作（1行展示的）加减乘除 三元运算符 -->
+        <!-- Vue中的数据都是响应式的，只要更改了数据，数据的变化会立即反应到页面（模板）当中 -->
+        <p>{{ text }}</p>
+        <p>{{ num+1 }}</p>
+        <p>{{ bol ? "true":"false" }}</p>
+        <p>{{html}}</p>
+
+        <hr />
+
+        <!-- 指令：是带有v-前缀的特殊的属性，指令是vue封装好的dom功能，可以快捷的控制元素的显示和隐藏，或者循环等 -->
+        <!-- v-text：用于渲染文本，如果和{{}}一起展示的话，优先展示指令对应的内容 -->
+        <!-- v-text指令和{{}}的区别：
+              {{}}在一个标签当中可以写多个，而相同的指令只能写一个
+        -->
+        <p v-text="text"></p>
+        <!-- v-html：用于渲染字符串当中带有标签的字符串 -->
+        <p v-text="html"></p>
+        <p v-html="html"></p>
+        <!-- v-cloak：解决页面闪烁问题 -->
+        <!-- v-show：控制元素的显示与隐藏，是通过样式的方式进行控制的，
+                   当值为true时为显示，为false时隐藏
+                v-show：是通过样式的方式进行控制 
+                v-show的值为true的情况，不起作用
+                v-show的值为false的情况，权重1000-->
+        <p v-show="bol" class="on">{{text}}</p>
+        <!-- v-if：也是控制元素的隐藏和显示 
+                v-if：控制元素的显示和隐藏时通过销毁dom的方式进行控制
+             v-else：使用的前提必须同级具有v-if指令
+             v-else-if：使用的前提必须同级具有v-if指令 -->
+        <p v-if="!bol">{{text}}</p>
+        <span v-else-if="bol">{{num}}</span>
+        <!-- v-for：基于源数据多次渲染元素或模块 -->
+        <!-- 数组 -->
+        <ul>
+            <li v-for="(item,index) in list" :key=index>
+                {{index}}:{{item}}
+            </li>
+        </ul>
+        <!-- 对象 循环对象的时候有三个变量，分别为value  key  index-->
+        <ul>
+            <li v-for="(item,key,index) in obj" :key=index>
+                {{index}} ===> {{item}} ===> {{key}}
+            </li>
+        </ul>
+        <!-- 数字-->
+        <ul>
+            <li v-for="(item,index) in num" :key=index>
+                {{index}} ===> {{item}}
+            </li>
+        </ul>
+        <!-- 字符串-->
+        <ul>
+            <li v-for="(item,index) in text" :key=index>
+                {{index}} ===> {{item}}
+            </li>
+        </ul>
+        <!-- v-pre：跳过当前标签的编译 -->
+        <p v-pre>{{text}}</p>
+        <!-- v-once：只渲染一次 -->
+        <p v-once>{{text}}</p>
+        <p>{{text}}</p>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data: function () {  // 数据仓库，页面数据存放的区域
+                return {
+                    text: "捷安达",
+                    num: 2,
+                    bol: true,
+                    html: "<span>123</span>",
+                    list:["苹果", "香蕉", "栗子"],
+                    obj:{
+                        name: '张三',
+                        age: 20,
+                        sex:'男',
+                        area:"总结大会"
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

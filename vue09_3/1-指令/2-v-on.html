@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        table{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <table border="1" cellspacing="0" cellspadding=0>
+            <tr>
+                <th>名称</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>电话号码</th>
+                <th>编辑</th>
+            </tr>
+            <tr v-for="(item,index) in list">
+                <td>{{item.name}}</td>
+                <td>
+                    <span v-if="item.sex == 0">男</span>
+                    <span v-else>女</span>
+                </td>
+                <td>{{item.age}}</td>
+                <td>{{item.tel}}</td>
+                <td><button @click="del(index)">删除</button></td>
+            </tr>
+        </table>
+
+        <!-- 事件类型 click  dblclick  mouser  keyup -->
+        <button v-on:click="events1">单击按钮</button>
+        <button v-on:dblclick="events2">双击按钮</button>
+        <button v-on:mouser="events3">鼠标离开按钮</button>
+        <button v-on:keyup="events4">键盘按钮</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data: function () {  // 数据仓库，页面数据存放的区域
+                return {
+                    list:[
+                        {name: '张磊', sex:1, age:30, tel:234324234234},
+                        {name: '李四', sex:0, age:30, tel:234324234234},
+                        {name: '王五', sex:1, age:60, tel:1234312},
+                        {name: 'Jack', sex:0, age:10, tel:23432432},
+                    ],
+        
+                }
+            },
+            methods: {
+                events1(){
+                    alert(34)
+                },
+                events2(){
+                    alert("双击事件")
+                },
+                events3(){
+                    alert("鼠标离开事件")
+                },
+                events4(){
+                    alert("键盘事件")
+                },
+                del(index){
+                    console.log(index)
+                    this.list.splice(index, 1)
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

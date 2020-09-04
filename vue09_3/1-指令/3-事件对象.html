@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        .parentBox{
+            width: 100px;
+            height: 100px;
+            background: blueviolet;
+        }
+        .childBox{
+            width: 50px;
+            height: 50px;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <!-- 事件类型 click  dblclick  mouser  keyup -->
+        <button v-on:click="events">单击按钮</button>
+
+        <ul>
+            <li v-for="(item,index) in list" :key="index" v-on:click="getIndex(index,$event)">
+                {{index}} ===> {{item}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(item,index) in list" :key="index" @click="getIndex(index,$event)">
+                {{index}} ===> {{item}}
+            </li>
+        </ul>
+
+        <!-- 事件修饰符
+               .stop：阻止事件冒泡
+               .prevent：阻止默认事件
+               .capture：事件捕获
+               .self：只当事件在本身触发时才执行  -->
+        <div class="parentBox" @click="parentEvents">
+            <div class="childBox" @click.stop="childEvents"></div>
+        </div>
+        <a href="https://www.baidu.com/" target="_blank" @click.prevent>百度</a>
+        <div class="parentBox" @click.self="parentEvents">
+            <div class="childBox" @click="childEvents"></div>
+        </div>
+        <br/>
+        <!-- 事件：
+                @keyup.enter：回车事件 -->
+        <input type="text" @keyup.enter="events" />
+        <div @keyup.esc="parentEvents">esc</div>
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data: function () {  // 数据仓库，页面数据存放的区域
+                return {
+                    list:["苹果", "香蕉", "栗子"],
+                }
+            },
+            methods: {
+                events(e){
+                    console.log(e)
+                    e.target.style.color = "red";
+                },
+                getIndex(index,e){
+                    console.log(index)
+                    e.target.style.color = "green";
+                },
+                parentEvents(){
+                    console.log("parent")
+                },
+                childEvents(){
+                    console.log("child")
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
