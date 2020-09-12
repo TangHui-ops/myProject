@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>12-注册组件化</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <cpn></cpn>
+  </div>
+
+  <!--<script type="text/x-template" id="cpn">-->
+  <!--  <div>-->
+  <!--    <h2>我是标题</h2>-->
+  <!--    <p>我是吴策天</p>-->
+  <!--    <p>我是div</p>-->
+  <!--  </div>-->
+  <!--</script>-->
+
+  <template id="cpn">
+    <div>
+      <h2>我是标题</h2>
+      <p>我是吴策天</p>
+      <p>{{message}}</p>
+    </div>
+  </template>
+
+  <script>
+    // 1.全局组件祖册的语法塘
+    // 创建组件构造器
+    Vue.component("cpn", {
+      template: '#cpn',
+      data() {
+        return {
+          message: 'Hello'
+        }
+      }
+    })
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+      },
+      // 局部组件
+      components: {
+
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <h3>{{counter}}</h3>
+  <button @click="addClick">+</button>
+  <button @click="delClick">-</button>
+
+  <button @keyup.enter="parentEvents">esc</button>
+</div>
+
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data:{
+      counter: 0
+    },
+    methods:{
+      addClick(){
+        this.counter++;
+      },
+      delClick(){
+        var count = this.counter--;
+        if(count == 0){
+          this.counter = 0;
+        }
+      },
+      parentEvents(){
+        console.log("点击keyup")
+      }
+    },
+    computed:{
+
+    }
+  })
+</script>
+</body>
+</html>

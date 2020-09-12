@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="ipt" v-if="iptShow" /> 
+        <button @click="getIpt">按钮</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data() {  // 数据仓库，页面数据存放的区域
+                return {
+                    iptShow: true,
+                }
+            },
+            methods: {
+                getIpt(){
+                    this.iptShow = !this.iptShow;
+                    // 切换元素的显示和隐藏，但是元素的显示和隐藏并没有显示到页面当中
+                    Vue.nextTick(function(){
+                        var ipt = document.getElementById("ipt")
+                        ipt.focus();
+                    })
+                    // this.$nextTick(function(){
+                    //     var ipt = document.getElementById("ipt");
+                    //     console.log(ipt)
+                    // })
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

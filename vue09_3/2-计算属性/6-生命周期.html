@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        
+    </div>
+
+
+    <script>
+        var vm = new Vue({
+            el: "#app",    
+            data:{  
+                list:['配合','俩的','水电费']
+            },
+            // 创建阶段 会执行4个生命周期钩子
+            beforeCreate() {   // 不能获取到data里面的数据或methods里面的方法
+                console.log("beforeCreate",this.list)
+            },
+            // 可以获取到data里面的数据或methods里面的方法
+            // 一般用于页面数据的初始化，一般执行的是ajax操作，vue还没有对模板进行编译
+            created() {
+                console.log("created",this.list)
+            },
+            // vue：对模板内容进行编译，编译成虚拟dom树，这一步执行的时机是在内存中执行的
+            beforeMount() {
+                console.log("beforeMount",this.list)
+            },
+            // 页面展示最新的数据，也可以通过js的方式获取到元素节点
+            // 一般用于插件的初始化 swiper
+            mounted() {
+                console.log("mounted",this.list)
+            },
+
+            // 运行阶段
+            beforeUpdate() {   // 只有data里面的数据发生变化了，beforeUpdate钩子里面可以监听数据的变化
+            //    beforeUpdate 更新页面对应的虚拟dom树
+                
+            },
+            // updated：页面展示最新的数据
+            updated() {
+                
+            },
+
+            // 销毁阶段执行的钩子函数 vue实例销毁
+            beforeDestroy() {
+                
+            },
+            destroyed() {
+                
+            },
+        })
+    </script>
+</body>
+
+</html>

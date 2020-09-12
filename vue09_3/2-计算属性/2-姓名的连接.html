@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="iptVal" @input="aa" placeholder="请输入姓氏" /> +
+        <input type="text" v-model="username" @input="aa" placeholder="请输入名称" /> =
+        <input type="text" v-model="names" />
+
+        <br/>
+        <br/>
+        <hr/>
+
+        <!-- 计算属性：computed
+                只要计算属性里面的return后面的数据，发生改变，计算属性就会重新进行计算
+                可以简单理解为对return的数据进行监听
+                   1.返回新的数据，函数进行赋值运算
+                   2.计算属性会对计算过的结果进行缓存，函数调用几次执行几次
+                 注意事项：在计算属性当中，不执行赋值运算-->
+        <input type="text" v-model="iptVal" @input="aa" placeholder="请输入姓氏" /> +
+        <input type="text" v-model="username" @input="aa" placeholder="请输入名称" /> =
+        <input type="text" v-model="total" />
+        <hr/>
+        <h2>人民币和美元的转换 1美元 = 7.1645人民币</h2>
+        <input type="text" v-model="iptVal" placeholder="请输入人民币" />
+        =
+        <input type="text" v-model="total" placeholder="请输入美元" />
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data() {  // 数据仓库，页面数据存放的区域
+                return {
+                    iptVal:"",
+                    username:"",
+                    names:"",
+                    meiyuan:"",
+                }
+            },
+            computed: {
+                // total(){   // 计算属性
+                //    return this.iptVal + this.username
+                // },
+                total:{   // 计算属性
+                  // 用于赋值操作
+                  set(val){
+                      this.iptVal = val*7.1645;
+                  },
+                  // 用于读取操作 
+                  get(){
+                      return this.iptVal/7.1645;
+                  }
+                }
+            },
+            methods: {
+                aa(){
+                    console.log(this.iptVal)
+                    this.names = this.iptVal + this.username
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

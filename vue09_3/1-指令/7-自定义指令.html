@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-focus="1+1" v-if="isShow" />
+        <button @click="isShow = !isShow">按钮</button>
+    </div>
+
+
+    <script>
+        var vm = new Vue({
+            // 1.创建全局的自定义指令
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data() {  // 数据仓库，页面数据存放的区域
+                return {
+                    isShow: true,
+                    list:[
+                        {name: '张磊', id:1,bol:true},
+                        {name: '李四', id:2,bol:false},
+                        {name: 'Jack', id:4,bol:true},
+                    ],
+                    
+                }
+            },
+            // 2.局部的自定义指令 只能在当前vue实例当中进行访问
+                // bind：指令第一次绑定到元素时执行的函数，绑定的时机是在内存当中进行执行的，执行的是样式上的操作
+                   // el：指令所绑定的元素 
+                   // binding：与自定义指令有关的对象
+                // inserted：执行js的操作时机在inserted里面执行，执行时机在浏览器里面执行   
+                // update：只要指令绑定的元素，有样式或值得变化就会触发的钩子函数
+                // componentUpdated：只要update执行了，componentUpdated也会执行
+                // unbind：自定义指令绑定的元素被销毁的时候执行的钩子函数
+            directives:{
+                focus:{
+                    bind(el,binding,vnode,oldVnode){   
+                        el.style.color="red";
+                        console.log(el);
+                        console.log(binding);
+                        console.log(vnode);
+                        console.log(oldVnode);
+                    },
+                    inserted(el){
+                        el.focus();
+                    },
+                    update(el){
+                        console.log(el);
+                    },
+                    componentUpdated(){
+
+                    },
+                    unbind(){
+                        console.log("元素被销毁")
+                    }
+                }
+            },
+            methods: {
+
+            },
+        })
+    </script>
+</body>
+
+</html>

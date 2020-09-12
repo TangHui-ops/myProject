@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="iptVal"placeholder="请输入姓氏" /> +
+  <input type="text" v-model="username"placeholder="请输入名称" />
+  = <input type="text" v-model="names" />
+  <hr/>
+  <h2>总价钱：{{totalPrice}}</h2>
+</div>
+
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data:{
+      iptVal: '',
+      username: '',
+      list:[
+        {id: 1, name: '代码大全', price: 120},
+        {id: 2, name: '西游记', price: 220},
+        {id: 3, name: '做最好的值', price: 420},
+      ]
+    },
+    computed:{
+      names(){
+        return this.iptVal + this.username;
+      },
+      totalPrice:{
+        set(val){
+          console.log(val)
+        },
+        get(){
+          let result = 0;
+          // for(let i = 0; i < this.list.length; i++){
+          //   result += this.list[i].price
+          // }
+          // return result
+          for(let i in this.list){
+            result += this.list[i].price
+          }
+          return result
+        }
+
+      }
+    }
+  })
+</script>
+</body>
+</html>

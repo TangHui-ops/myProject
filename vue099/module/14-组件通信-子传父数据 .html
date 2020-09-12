@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>13-组件通信-父传子数据</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <cpn @itemClick="cpnClick"></cpn>
+  </div>
+
+  <template id="cpn">
+    <div>
+      <button v-for="item in categories" @click="btnClick(item)">{{item.name}}</button>
+    </div>
+  </template>
+
+  <script>
+    // 子组件
+    const cpn = {
+      template: '#cpn',
+      data() {
+        return {
+          categories:[
+            {id: 1, name: '热门推荐'},
+            {id: 2, name: '手机数码'},
+            {id: 3, name: '家用家电'},
+            {id: 4, name: '电脑办公'},
+          ]
+        }
+      },
+      methods: {
+        btnClick(item){
+          // console.log(item)
+          // 发送一个事件：自定义事件
+          this.$emit('itemclick', item)
+        }
+      },
+    }
+
+    // 父组件 
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        lists: ['名侦探柯南', '琉璃', '上古神王', '褚璇玑']
+      },
+      methods: {
+        cpnClick(item){
+          console.log('cpnClick',item);
+        }
+      },
+      components: {
+        cpn
+      }
+    })
+  </script>
+</body>
+
+</html>

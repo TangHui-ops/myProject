@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>13-组件通信-父传子数据</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <cpn :c-lists="lists"></cpn>
+  </div>
+
+  <template id="cpn">
+    <div>
+      <ul>
+        <li v-for="item in cLists">{{item}}</li>
+      </ul>
+    </div>
+  </template>
+
+  <script>
+    // 父传子：props
+    const cpn = {
+      template: '#cpn',
+      //props: ['clists']
+      props:{
+        // clists: Array
+        cLists:{
+          type: Array,      // 类型
+          default(){
+            return{}
+          },    // 默认值
+          required: true    // 必须传值
+        }
+      }
+    }
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        lists: ['名侦探柯南', '琉璃', '上古神王', '褚璇玑']
+      },
+      // 局部组件
+      components: {
+        cpn
+      }
+    })
+  </script>
+</body>
+
+</html>

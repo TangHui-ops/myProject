@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册组件化</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<cpn2></cpn2>
+</div>
+
+<script>
+  // 1.创建第一个组件 ==》子组件
+  const cpnCA = Vue.extend({
+    template: `<div>
+                   <h2>我是标题</h2>
+                   <p>我是吴策天</p>
+                   <p>我是div</p>
+               </div>`
+  })
+  // 2.创建第二个组件  ==》父组件
+  const cpnCB = Vue.extend({
+    template: `<div>
+                   <h2>我是标题2</h2>
+                   <p>我是吴策天2</p>
+                   <p>我是div2</p>
+                   <cpn1></cpn1>
+               </div>`,
+    components:{
+      cpn1: cpnCA
+    }
+  })
+
+  // root ==》 根组件
+  const vm = new Vue({
+    el: '#app',
+    data:{
+    },
+    components:{
+      // cpn1: cpnCA,
+      cpn2: cpnCB
+    }
+  })
+</script>
+</body>
+</html>

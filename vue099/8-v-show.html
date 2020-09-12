@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <h3 v-show="isShow">{{counter}}</h3>
+  <h3 v-if="isShow">{{counter}}</h3>
+</div>
+
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data:{
+      counter: "asd",
+      isShow: true
+    },
+    methods:{
+
+    }
+  })
+</script>
+</body>
+</html>

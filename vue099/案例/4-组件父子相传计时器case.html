@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>4-组件父子相传计时器case</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h2>当前计数：{{counter}}</h2>
+    <cpn @changeAdd="changeNum" @changeDel="changeNum"></cpn>
+  </div>
+
+  <template id="cpnC">
+    <div>
+      <button @click="addClick">+</button>
+      <button @click="delClick">-</button>
+      {{num}}
+    </div>
+  </template>
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        counter: 0,
+      },
+      methods: {
+        changeNum(num){
+          this.counter = num;
+        }
+      },
+      components: {
+        'cpn':{
+          template: '#cpnC',
+          data() {
+            return {
+              num: 0
+            }
+          },
+          methods: {
+            addClick(){
+              this.num ++;
+              this.$emit("changeadd",this.num)
+            },
+            delClick(){
+              this.num --;
+              this.$emit("changedel",this.num)
+            }
+          },
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

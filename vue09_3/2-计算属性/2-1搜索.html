@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 1.找到符合条件的数据
+             2.把数据展示到页面当中
+             3.原数据不能丢失 -->
+        <!-- list数据：既能展示全部的数据，又能展示筛选之后的数据 -->
+        {{aa}}
+        <input type="input" v-model="iptVal" />
+        <ul>
+            <li v-for="(item,index) in aa" :key="item.id">
+                <input type="checkbox" v-model="item.isChecked" />{{item.name}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data() {  // 数据仓库，页面数据存放的区域
+                return {
+                    iptVal:"",
+                    newArr:"",
+                    list:[
+                        {name: '张磊', id:1,isChecked:false},
+                        {name: '李四', id:2,isChecked:true},
+                        {name: 'Jack', id:3,isChecked:false},
+                        {name: '张倩', id:4,isChecked:false},
+                    ],
+                }
+            },
+            computed: {
+                aa(){
+                    if(this.iptVal){
+                        return this.list.filter(ele => ele.name.includes(this.iptVal))
+                    }else{
+                        return this.list
+                    }
+                    
+                }
+            },
+            methods: {
+                change(){
+                    var newArr = this.list.filter(ele => ele.name.includes(this.iptVal))
+                    this.newArr = newArr;
+                    this.list = newArr;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

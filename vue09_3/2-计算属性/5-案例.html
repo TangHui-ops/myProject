@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="box">
+            <div>
+                Id <input type="text" v-model='id' placeholder="请输入ID" />
+                Name <input type="text" v-model='name' placeholder="请输入Name" />
+                Number <input type="text" v-model.number='num' placeholder="请输入Number" />
+                <button @click="add">添加</button>
+            </div>
+            <input type="text" v-model='searchVal' placeholder="请输入查找内容" @input='reCal' />
+        </div>
+        <table border="1px" cellspacing=0 cellpadding=0>
+            <tr>
+                <th>全选<input type="checkbox" v-model='CheckAll' /></th>
+                <th>ID(id)</th>
+                <th>NAME(姓名)</th>
+                <th>NUM(数量)</th>
+                <th>CTIME(创建时间)</th>
+                <th>OPERATION(更多操作)</th>
+            </tr>
+            <tr v-for="(item,index) in lists" :key="item.id">
+                <td><input type="checkbox" v-model='item.isChecked' /></td>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>
+                    <span @dblclick="toggleIpt(item.id)" v-if='!item.bol'>{{item.num}}</span>
+                    <input type="text" v-else v-model.number='item.num' @blur="item.bol = !item.bol" id="ipt" class="ipt" /></td>
+                <td>{{item.time}}</td>
+                <td><button @click="del(item.id)">删除</button></td>
+            </tr>
+        </table>
+        <div class="total">
+            <p>总计数量：{{totall}}</p>
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",     // Vue渲染开始的地方,可以对里面的子元素进行增删改查操作
+            data() {  // 数据仓库，页面数据存放的区域
+                return {
+                    id: "",
+                    name: "",
+                    num: "",
+                    searchVal: "",
+                    isAll: false,
+                    total: "",
+                    list:[
+                        {
+                            id: 1,
+                            name: '张三',
+                            num: 4,
+                            time: 2017,
+                            isChecked: false,
+                            bol: false
+                        },{
+                            id: 2,
+                            name: '栗子',
+                            num: 34,
+                            time: 2018,
+                            isChecked: false,
+                            bol: false
+                        },{
+                            id: 3,
+                            name: '进阶',
+                            num: 67,
+                            time: 2020,
+                            isChecked: false,
+                            bol: true
+                        }
+                    ]
+                }
+            },
+            computed: {
+                lists(){
+                    if(this.searchVal){
+                        return this.list.filter(ele => ele.name.includes(this.searchVal));
+                    }else{
+                        return this.list;
+                    }
+                },
+                CheckAll:{
+                    set(val){
+                        this.list.forEach(ele => ele.isChecked == val);
+                    },
+                    get(){
+                        return this.list.every(ele => ele.isChecked == true)
+                    }
+                    
+                },
+                totall(){
+                    return this.list.reduce((total,current) => {
+                        if(current.isChecked){
+                            return total + current.num;
+                        }else{
+                            return total;
+                        }
+                    },0)
+                }
+            },
+            methods: {
+                toggleIpt(val){
+                    var item = this.list.find(ele => ele.id == val);
+                    item.bol = !item.bol;
+                    this.$nextTick(() =>{
+                        var ipt = document.getElementById("ipt");
+                        ipt.focus();
+                    })
+                },
+                del(id){
+                    var index = this.list.findIndex(ele => ele.id == id);
+                    this.list.splice(index,1);
+                },
+                add(){
+
+                },
+                reCal(){
+
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
